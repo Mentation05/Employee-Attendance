@@ -1,0 +1,127 @@
+@import '../../../scss/style.scss';
+
+.employee-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%; // Responsive width
+  max-width: 300px; // Max width for larger screens
+  height: auto;
+  box-shadow: $boxShadow !important;
+  border: 1px solid rgba(91, 75, 120, 0.725);
+  margin: 0 auto; // Center cards horizontally
+
+  &:hover {
+    background-color: rgba(187, 216, 239, 0.177);
+    cursor: pointer;
+  }
+
+  .employee-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover !important;
+    margin-bottom: 10px; // Space between image and text
+  }
+
+  .title {
+    font-family: $unbounded;
+    font-size: 1.2rem !important;
+    margin-bottom: 5px; // Space between title and text
+  }
+
+  .text {
+    font-size: 14px !important;
+    font-family: $mont;
+  }
+}
+
+.input-container {
+  .input {
+    border: none !important;
+    outline: none !important;
+    font-family: $mont !important;
+    font-size: 14px !important;
+    font-weight: 400;
+    height: 40px; // Consistent height for inputs
+  }
+
+  .btn {
+    width: 100% !important;
+    font-family: $mont;
+    border: 1px solid #000;
+    color: #000;
+    background-color: greenyellow;
+    cursor: pointer;
+    height: 40px; // Consistent height for button
+    font-size: 14px; // Consistent font size
+
+    &:hover {
+      color: #000;
+      background-color: rgba(172, 255, 47, 0.536);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .employee-card {
+    width: 100%;
+    max-width: none; // Remove max-width on small screens
+  }
+}
+
+#ExtraLargeModalTitle {
+  font-family: $unbounded !important;
+}
+
+.modal-input {
+  font-family: $mont;
+  border: 1px solid #fff;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  background-color: transparent !important;
+}
+
+.modal-input-select {
+  font-family: $mont;
+  border: 1px solid #fff;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  background-color: #000 !important;
+}
+
+.modal-btn-save {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: yellowgreen !important;
+  border-radius: 0px!important;
+  cursor: pointer;
+  font-family: $mont;
+
+  &:hover {
+    background-color: transparent !important;
+    border: 1px solid #fff;
+  }
+}
+
+.modal-btn-close {
+  border: 1px solid #000;
+  color: #000000;
+  background-color: rgb(227, 118, 118);
+  border-radius: 0px !important;
+  cursor: pointer;
+  font-family: $mont;
+
+  &:hover {
+    background-color: transparent !important;
+    border: 1px solid #fff;
+  }
+}
+
+::placeholder {
+  font-family: $mont;
+}

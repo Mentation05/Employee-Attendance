@@ -1,20 +1,23 @@
 // If you want to override variables do it here
-@import "variables";
+@import 'variables';
 
 // Import styles
-@import "@coreui/coreui/scss/coreui";
-@import "@coreui/chartjs/scss/coreui-chartjs";
+@import '@coreui/coreui/scss/coreui';
+@import '@coreui/chartjs/scss/coreui-chartjs';
 
 // Vendors
-@import "vendors/simplebar";
+@import 'vendors/simplebar';
 
 // Custom styles for this theme
-@import "theme";
+@import 'theme';
 
 // If you want to add custom CSS you can put it here
-@import "custom";
+@import 'custom';
 
+// raect date peaker css
+@import 'react-datepicker/dist/react-datepicker.css';
 
 $tech: 'Technor', sans-serif;
-$mont: "Montserrat", sans-serif;
-$unbound: "Unbounded", sans-serif;
+$mont: 'Montserrat', sans-serif;
+$unbounded: 'Unbounded', sans-serif;
+$boxShadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;

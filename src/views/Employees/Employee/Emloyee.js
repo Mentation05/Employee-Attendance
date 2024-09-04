@@ -1,180 +1,194 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Form, InputGroup, Modal } from 'react-bootstrap';
-import "./Emloyee.scss";
+import "./Employee.scss";
+import {
+  CContainer,
+  CRow,
+  CCol,
+  CCard,
+  CCardBody,
+  CCardImage,
+  CCardTitle,
+  CCardText,
+  CButton,
+  CFormInput,
+  CFormSelect,
+  CFormTextarea,
+  CModal,
+  CModalHeader,
+  CModalTitle,
+  CModalBody,
+  CModalFooter,
+  CForm,
+} from '@coreui/react'
+import DatePicker from 'react-datepicker'
 
 const employees = [
-  { id: 1, name: 'John Doe', role: 'Web Designer', image: 'path_to_image' },
-  { id: 2, name: 'Richard Miles', role: 'Web Developer', image: 'path_to_image' },
-  { id: 3, name: 'John Smith', role: 'Android Developer', image: 'path_to_image' },
-  { id: 4, name: 'Mike Litorus', role: 'iOS Developer', image: 'path_to_image' },
-  { id: 5, name: 'Wilmer Deluna', role: 'Team Leader', image: 'path_to_image' },
-  { id: 6, name: 'Jeffrey Warden', role: 'Web Developer', image: 'path_to_image' },
-  { id: 7, name: 'Bernardo Galaviz', role: 'Web Developer', image: 'path_to_image' },
-  { id: 8, name: 'Lesley Grauer', role: 'Team Leader', image: 'path_to_image' },
-];
+  {
+    id: 0,
+    name: 'John Doe',
+    role: 'Web Designer',
+    image:
+      'https://images.unsplash.com/photo-1499323888381-7fd102a793de?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  // ... other employees
+]
 
 const EmployeeCard = ({ employee }) => (
-  <Col md={6} lg={4} xl={3} className="mb-4">
-    <Card>
-      <Card.Img variant="top" src={employee.image} />
-      <Card.Body className="text-center">
-        <Card.Title>{employee.name}</Card.Title>
-        <Card.Text>{employee.role}</Card.Text>
-        <Button variant="outline-secondary">Details</Button>
-      </Card.Body>
-    </Card>
-  </Col>
-);
+  <CCol xs={12} sm={6} md={4} lg={3} className="mb-4">
+    <CCard className="employee-card">
+      <CCardImage className="employee-image" src={employee.image} alt={employee.name} />
+      <CCardBody>
+        <CCardTitle className="title">{employee.name}</CCardTitle>
+        <CCardText className="text">{employee.role}</CCardText>
+      </CCardBody>
+    </CCard>
+  </CCol>
+)
 
 const Employees = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleShow = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+  const [visibleXL, setVisibleXL] = useState(false)
+  const [joiningDate, setJoiningDate] = useState(null)
 
   return (
-    <Container fluid>
-      <Row className="mb-3">
-        <Col md={4}>
-          <InputGroup>
-            <Form.Control placeholder="Employee ID" />
-          </InputGroup>
-        </Col>
-        <Col md={4}>
-          <Form.Control placeholder="Employee Name" />
-        </Col>
-        <Col md={4}>
-          <Form.Select>
+    <CContainer fluid className="input-container">
+      <CRow className="mb-3">
+        <CCol xs={12} sm={6} md={3} className="mb-2">
+          <CFormInput className="input" placeholder="Employee ID" />
+        </CCol>
+        <CCol xs={12} sm={6} md={3} className="mb-2">
+          <CFormInput className="input" placeholder="Employee Name" />
+        </CCol>
+        <CCol xs={12} sm={6} md={3} className="mb-2">
+          <CFormSelect className="input">
             <option>Select Designation</option>
-            {/* Add more designations here */}
-          </Form.Select>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={12} className="text-end mb-3">
-          <Button variant="success">Search</Button>
-          <Button variant="warning" className="ms-2" onClick={handleShow}>
+            <option>Web Developer</option>
+            <option>App Developer</option>
+            <option>UI/UX Developer</option>
+            <option>Video Editor</option>
+            <option>Manager</option>
+          </CFormSelect>
+        </CCol>
+        <CCol xs={12} sm={6} md={3} className="mb-2 d-flex align-items-center">
+          <CButton color="success" className="btn me-2">
+            Search
+          </CButton>
+          <CButton color="success" className="btn" onClick={() => setVisibleXL(true)}>
             Add Employee
-          </Button>
-        </Col>
-      </Row>
-      <Row>
+          </CButton>
+        </CCol>
+      </CRow>
+
+      <CRow>
         {employees.map((employee) => (
           <EmployeeCard key={employee.id} employee={employee} />
         ))}
-      </Row>
+      </CRow>
 
-      {/* Add Employee Modal */}
-      <Modal show={showModal} onHide={handleClose} size="lg" className="add-employee-modal">
-        <Modal.Header closeButton>
-          <Modal.Title>Add Employee</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formFirstName">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter first name" />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formLastName">
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter last name" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formUsername">
-                  <Form.Label>Username</Form.Label>
-                  <Form.Control type="text" placeholder="Enter username" />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Enter password" />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formConfirmPassword">
-                  <Form.Label>Confirm Password</Form.Label>
-                  <Form.Control type="password" placeholder="Confirm password" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formEmployeeID">
-                  <Form.Label>Employee ID</Form.Label>
-                  <Form.Control type="text" placeholder="Enter employee ID" />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formJoiningDate">
-                  <Form.Label>Joining Date</Form.Label>
-                  <Form.Control type="date" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formPhone">
-                  <Form.Label>Phone</Form.Label>
-                  <Form.Control type="text" placeholder="Enter phone number" />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formCompany">
-                  <Form.Label>Company</Form.Label>
-                  <Form.Control type="text" placeholder="Enter company name" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="formDepartment">
-                  <Form.Label>Department</Form.Label>
-                  <Form.Control as="select">
-                    <option>Select Department</option>
-                    {/* Add department options here */}
-                  </Form.Control>
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="formDesignation">
-                  <Form.Label>Designation</Form.Label>
-                  <Form.Control as="select">
-                    <option>Select Designation</option>
-                    {/* Add designation options here */}
-                  </Form.Control>
-                </Form.Group>
-              </Col>
-            </Row>
-            {/* Add Module Permissions as needed */}
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+      <CModal
+        size="xl"
+        visible={visibleXL}
+        onClose={() => setVisibleXL(false)}
+        aria-labelledby="ExtraLargeModalTitle"
+      >
+        <CModalHeader>
+          <CModalTitle id="ExtraLargeModalTitle">Add New Employee</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CForm>
+            <CRow className="mb-3">
+              <CCol xs={12}>
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <CFormInput className="modal-input" type="text" placeholder="First Name" />
+                      </td>
+                      <td>
+                        <CFormInput className="modal-input" type="text" placeholder="Last Name" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <CFormInput className="modal-input" type="email" placeholder="Email" />
+                      </td>
+                      <td>
+                        <CFormInput className="modal-input" type="text" placeholder="Username" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <CFormInput
+                          className="modal-input"
+                          type="password"
+                          placeholder="Password"
+                        />
+                      </td>
+                      <td>
+                        <CFormInput
+                          className="modal-input"
+                          type="password"
+                          placeholder="Confirm Password"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <CFormInput className="modal-input" type="text" placeholder="Employee ID" />
+                      </td>
+                      <td>
+                        <DatePicker
+                          selected={joiningDate}
+                          onChange={(date) => setJoiningDate(date)}
+                          placeholderText="Joining Date"
+                          className="form-control modal-input"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <CFormInput className="modal-input" type="tel" placeholder="Phone" />
+                      </td>
+                      <td>
+                        <CFormInput className="modal-input" type="text" placeholder="Company" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <CFormSelect className='modal-input-select'>
+                          <option>Select Designation</option>
+                          <option>Web Developer</option>
+                          <option>App Developer</option>
+                          <option>UI/UX Developer</option>
+                          <option>Video Editor</option>
+                          <option>Manager</option>
+                        </CFormSelect>
+                      </td>
+                      <td>
+                        <CFormSelect className='modal-input-select'>
+                          <option>Select Designation</option>
+                          <option>Web Developer</option>
+                          <option>App Developer</option>
+                          <option>UI/UX Developer</option>
+                          <option>Video Editor</option>
+                          <option>Manager</option>
+                        </CFormSelect>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </CCol>
+            </CRow>
+          </CForm>
+        </CModalBody>
+        <CModalFooter>
+          <CButton className="modal-btn-close" onClick={() => setVisibleXL(false)}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
-  );
-};
+          </CButton>
+          <CButton className="modal-btn-save">Save changes</CButton>
+        </CModalFooter>
+      </CModal>
+    </CContainer>
+  )
+}
 
-export default Employees;
+export default Employees
