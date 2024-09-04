@@ -51,26 +51,26 @@ const _nav = [
     to: '/app',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     items: [
+      // {
+      //   component: CNavItem,
+      //   name: 'Chat',
+      //   to: '/app/chat',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Call',
+      //   to: '/app/call',
+      // },
       {
         component: CNavItem,
-        name: 'Chat',
-        to: '/app/chat',
+        name: 'Calendar',
+        to: '/app/calendar',
       },
-      {
-        component: CNavItem,
-        name: 'Call',
-        to: '/app/call',
-      },
-      {
-        component: CNavItem,
-        name: 'Calender',
-        to: '/app/calender',
-      },
-      {
-        component: CNavItem,
-        name: 'Email',
-        to: '/app/email',
-      },
+      // {
+      //   component: CNavItem,
+      //   name: 'Email',
+      //   to: '/app/email',
+      // },
     ],
   },
   {
@@ -104,11 +104,11 @@ const _nav = [
         name: 'Leave Employee',
         to: '/employees/employee-leave',
       },
-      {
-        component: CNavItem,
-        name: 'Leave Settings',
-        to: '/employees/leave-Settings',
-      },
+      // {
+      //   component: CNavItem,
+      //   name: 'Leave Settings',
+      //   to: '/employees/leave-Settings',
+      // },
       {
         component: CNavItem,
         name: 'Attendence Admin',

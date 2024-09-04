@@ -89,7 +89,7 @@ const CompanyUsers = React.lazy(() => import('./views/CompanyUsers/CompanyUsers'
 const ChatApp = React.lazy(() => import('./views/Application/Chat/Chat'))
 const CallApp = React.lazy(() => import('./views/Application/Call/Call'))
 const EmailApp = React.lazy(() => import('./views/Application/Email/Email'))
-const Calender = React.lazy(() => import('./views/Application/Calender/Calender'))
+const calendar = React.lazy(() => import('./views/Application/Calendar/Calendar'))
 const AdminDashboard = React.lazy(() => import('./views/Dashboard/AdminDashboard/AdminDashboard'))
 const EmployeeDashboard = React.lazy(
   () => import('./views/Dashboard/EmployeeDashboard/EmployeeDashboard'),
@@ -114,7 +114,7 @@ const routes = [
   { path: '/app/chat', name: 'Chat', element: ChatApp },
   { path: '/app/call', name: 'Chat', element: CallApp },
   { path: '/app/email', name: 'Chat', element: EmailApp },
-  { path: '/app/calender', name: 'Chat', element: Calender },
+  { path: '/app/calendar', name: 'Chat', element: calendar },
   { path: '/employees', name: 'Employees' },
   { path: '/employees/all-employees', name: 'All Employees', element: Employee },
   { path: '/employees/leave-admin', name: 'Leave', element: Leave },

@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './OverTime.scss';
 
 function Overtime() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleEdit = () => {
+    // Implement edit functionality
+    console.log("Edit clicked");
+  };
+
+  const handleDelete = () => {
+    // Implement delete functionality
+    console.log("Delete clicked");
+  };
+
   return (
     <div className="overtime-container">
       <div className="header">
@@ -57,7 +73,17 @@ function Overtime() {
               <td>Lorem ipsum dolor</td>
               <td><span className="status new">New</span></td>
               <td>Richard Miles</td>
-              <td><button className="action-button">...</button></td>
+              <td>
+                <div className="dropdown">
+                  <button className="action-button" onClick={handleDropdownToggle}>...</button>
+                  {isDropdownOpen && (
+                    <div className="dropdown-menu">
+                      <button onClick={handleEdit}>Edit</button>
+                      <button onClick={handleDelete}>Delete</button>
+                    </div>
+                  )}
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>

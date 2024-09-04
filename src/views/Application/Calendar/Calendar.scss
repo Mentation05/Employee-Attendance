@@ -1,0 +1,47 @@
+.calendar-container {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .add-event-btn {
+      background-color: yellowgreen;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-event-btn:hover {
+      background-color: yellowgreen;
+    }
+  }
+
+  .rbc-calendar {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .rbc-month-view {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .rbc-event {
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+    text-align: center;
+  }
+}

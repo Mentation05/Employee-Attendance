@@ -14,7 +14,7 @@
         }
 
         .add-holiday-btn {
-            background-color: #ff5722;
+            background-color: yellowgreen;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -23,7 +23,7 @@
             font-size: 16px;
 
             &:hover {
-                background-color: #e64a19;
+                background-color: yellowgreen;
             }
         }
     }
@@ -140,11 +140,11 @@
                 }
 
                 button:last-of-type {
-                    background-color: #dc3545;
+                    background-color: red;
                     color: white;
 
                     &:hover {
-                        background-color: #c82333;
+                        background-color: red;
                     }
                 }
             }
