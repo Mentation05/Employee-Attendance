@@ -3,7 +3,7 @@ import "./AttendenceAdmin.scss";
 export default function AttendenceAdmin() {
   return (
     <div>
-      AttendenceAdmin
+      AttendenceAdmin And Employee Admin
     </div>
   )
 }
