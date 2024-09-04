@@ -1,0 +1,40 @@
+// Here you can add other styles
+
+// font-family: 'Technor', sans-serif;
+// font-family: 'Ranade', sans-serif;
+// font-family: 'Excon', sans-serif;
+// font-family: "Montserrat", sans-serif;
+// font-family: "Unbounded", sans-serif;
+
+//todo: Footer Container
+.footer-container {
+  .copy-right-box {
+    a {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 14px !important;
+      text-underline-offset: 6px !important;
+    }
+
+    span {
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .ms-auto {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 14px !important;
+    text-underline-offset: 6px !important;
+  }
+}
+
+// todo: Sidebar
+
+.sidebar-container {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px !important;
+}
+
+.app-sidebar-nav {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px !important;
+}

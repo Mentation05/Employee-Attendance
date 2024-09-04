@@ -1,0 +1,94 @@
+@import '../../../scss/style.scss';
+
+.register-container {
+  .main-container {
+    .left-side {
+      h1 {
+        color: #7695ff !important;
+        font-family: $unbound;
+        font-size: 3rem !important;
+        font-weight: 600 !important;
+      }
+
+      .text {
+        font-family: $mont;
+      }
+    }
+
+    .right-side {
+      .form-container {
+        border: 1px solid #acacac !important;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 20px !important;
+
+        h3 {
+          text-align: center;
+          font-family: $unbound;
+          letter-spacing: 1.2px;
+          text-decoration: underline;
+          text-underline-offset: 6px;
+          color: #7695ff;
+        }
+
+        form {
+          .input {
+            label {
+              color: #bbc4e1;
+              font-family: $tech;
+              font-size: 16px;
+              font-weight: 400;
+              text-transform: capitalize;
+            }
+
+            input {
+              background-color: transparent !important;
+              outline: none;
+              border: 1px solid #eee;
+              padding: 10px;
+              font-family: $mont;
+              font-size: 15px;
+              font-weight: 500;
+            }
+
+            ::placeholder {
+              font-family: $mont;
+              color: #7695ff;
+              font-size: 14px;
+              font-weight: 500;
+            }
+
+            .form-select {
+              font-family: $mont;
+              padding: 10px;
+              border: 1px solid #eee;
+              font-size: 15px;
+              background-color: transparent !important;
+              color: #fff !important;
+              outline: none !important;
+
+              &:focus {
+                box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+                outline: none !important;
+              }
+
+              &:active {
+                outline: none !important;
+              }
+
+              option {
+                color: #fff !important;
+                background-color: #000 !important;
+              }
+            }
+          }
+
+          button {
+            margin-top: 20px;
+            border: 1px solid #eee;
+            font-family: $unbound;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
