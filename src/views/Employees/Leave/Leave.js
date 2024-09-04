@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import './Leave.scss'
 import {
   CContainer,
@@ -23,6 +23,12 @@ import {
   CDropdownToggle,
   CDropdownMenu,
   CDropdownItem,
+  CModal,
+  CModalHeader,
+  CModalTitle,
+  CModalBody,
+  CModalFooter,
+  CFormTextarea,
 } from '@coreui/react'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { FaRegCircleDot } from 'react-icons/fa6'
@@ -30,6 +36,7 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 import { GoPlusCircle } from 'react-icons/go'
 
 const LeavesPage = () => {
+
   const employeeLeaves = [
     {
       id: 5,
@@ -75,6 +82,8 @@ const LeavesPage = () => {
     },
   ]
 
+  const [visible, setVisible] = useState(false);
+
   return (
     <>
       <CCard className="fluid">
@@ -84,15 +93,62 @@ const LeavesPage = () => {
               <h3 className="page-title">Admin Leaves</h3>
             </CCol>
             <CCol xs="auto">
-              <CButton
-                color="primary"
-                className="btn-sm btn-rounded btns"
-                data-bs-toggle="modal"
-                data-bs-target="#add_leave"
-              >
-                <GoPlusCircle /> Add Leave
-              </CButton>
+        <CButton
+          color="primary"
+          className="btn-sm btn-rounded btns"
+          onClick={() => setVisible(!visible)}
+        >
+          <GoPlusCircle /> Add Leave
+        </CButton>
+      </CCol>
+
+      <CModal visible={visible} onClose={() => setVisible(false)} id="add_leave">
+        <CModalHeader onClose={() => setVisible(false)}>
+          <CModalTitle>Add Leave</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CRow>
+            <CCol xs={12}>
+              <CFormSelect className='modal-form-label' aria-label="Select Type of Leave">
+                <option className='modal-option'>Select Type of Leave</option>
+                <option className='modal-option' value="1">Casual Leave</option>
+                <option className='modal-option' value="2">Sick Leave</option>
+                <option className='modal-option' value="3">Earned Leave</option>
+              </CFormSelect>
             </CCol>
+          </CRow>
+
+          <CRow className="mt-3">
+            <CCol xs={6}>
+              <CFormInput className='modal-input' type="date" label="From Date" />
+            </CCol>
+            <CCol xs={6}>
+              <CFormInput className='modal-input' type="date" label="To Date" />
+            </CCol>
+          </CRow>
+
+          <CRow className="mt-3">
+            <CCol xs={6}>
+              <CFormInput className='modal-input' type="number" label="Number of Days" />
+            </CCol>
+            <CCol xs={6}>
+              <CFormInput className='modal-input' type="number" label="Remaining Leave" />
+            </CCol>
+          </CRow>
+
+          <CRow className="mt-3">
+            <CCol xs={12}>
+              <CFormTextarea className='modal-input' label="Leave Summary" rows="3" />
+            </CCol>
+          </CRow>
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setVisible(false)}>
+            Cancel
+          </CButton>
+          <CButton color="primary">Submit</CButton>
+        </CModalFooter>
+      </CModal>
           </CRow>
         </CCardHeader>
         <CCardBody>
