@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import "./Employee.scss";
+import React, { useState } from 'react'
+import './Employee.scss'
 import {
   CContainer,
   CRow,
@@ -33,15 +33,17 @@ const employees = [
 ]
 
 const EmployeeCard = ({ employee }) => (
-  <CCol xs={12} sm={6} md={4} lg={3} className="mb-4">
-    <CCard className="employee-card">
-      <CCardImage className="employee-image" src={employee.image} alt={employee.name} />
-      <CCardBody>
-        <CCardTitle className="title">{employee.name}</CCardTitle>
-        <CCardText className="text">{employee.role}</CCardText>
-      </CCardBody>
-    </CCard>
-  </CCol>
+  <div className="employee-container">
+    <CCol xs={12} sm={6} md={4} lg={3} className="mb-4">
+      <CCard className="employee-card">
+        <CCardImage className="employee-image" src={employee.image} alt={employee.name} />
+        <CCardBody>
+          <CCardTitle className="title">{employee.name}</CCardTitle>
+          <CCardText className="text">{employee.role}</CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+  </div>
 )
 
 const Employees = () => {
@@ -49,8 +51,8 @@ const Employees = () => {
   const [joiningDate, setJoiningDate] = useState(null)
 
   return (
-    <CContainer fluid className="input-container">
-      <CRow className="mb-3">
+    <CContainer>
+      <CRow className="mb-3 input-container">
         <CCol xs={12} sm={6} md={3} className="mb-2">
           <CFormInput className="input" placeholder="Employee ID" />
         </CCol>
@@ -77,115 +79,128 @@ const Employees = () => {
         </CCol>
       </CRow>
 
-      <CRow>
-        {employees.map((employee) => (
-          <EmployeeCard key={employee.id} employee={employee} />
-        ))}
-      </CRow>
+      <div className="">
+        <CRow>
+          {employees.map((employee) => (
+            <EmployeeCard key={employee.id} employee={employee} />
+          ))}
+        </CRow>
+      </div>
 
-      <CModal
-        size="xl"
-        visible={visibleXL}
-        onClose={() => setVisibleXL(false)}
-        aria-labelledby="ExtraLargeModalTitle"
-      >
-        <CModalHeader>
-          <CModalTitle id="ExtraLargeModalTitle">Add New Employee</CModalTitle>
-        </CModalHeader>
-        <CModalBody>
-          <CForm>
-            <CRow className="mb-3">
-              <CCol xs={12}>
-                <table className="table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <CFormInput className="modal-input" type="text" placeholder="First Name" />
-                      </td>
-                      <td>
-                        <CFormInput className="modal-input" type="text" placeholder="Last Name" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <CFormInput className="modal-input" type="email" placeholder="Email" />
-                      </td>
-                      <td>
-                        <CFormInput className="modal-input" type="text" placeholder="Username" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <CFormInput
-                          className="modal-input"
-                          type="password"
-                          placeholder="Password"
-                        />
-                      </td>
-                      <td>
-                        <CFormInput
-                          className="modal-input"
-                          type="password"
-                          placeholder="Confirm Password"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <CFormInput className="modal-input" type="text" placeholder="Employee ID" />
-                      </td>
-                      <td>
-                        <DatePicker
-                          selected={joiningDate}
-                          onChange={(date) => setJoiningDate(date)}
-                          placeholderText="Joining Date"
-                          className="form-control modal-input"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <CFormInput className="modal-input" type="tel" placeholder="Phone" />
-                      </td>
-                      <td>
-                        <CFormInput className="modal-input" type="text" placeholder="Company" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <CFormSelect className='modal-input-select'>
-                          <option>Select Designation</option>
-                          <option>Web Developer</option>
-                          <option>App Developer</option>
-                          <option>UI/UX Developer</option>
-                          <option>Video Editor</option>
-                          <option>Manager</option>
-                        </CFormSelect>
-                      </td>
-                      <td>
-                        <CFormSelect className='modal-input-select'>
-                          <option>Select Designation</option>
-                          <option>Web Developer</option>
-                          <option>App Developer</option>
-                          <option>UI/UX Developer</option>
-                          <option>Video Editor</option>
-                          <option>Manager</option>
-                        </CFormSelect>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </CCol>
-            </CRow>
-          </CForm>
-        </CModalBody>
-        <CModalFooter>
-          <CButton className="modal-btn-close" onClick={() => setVisibleXL(false)}>
-            Close
-          </CButton>
-          <CButton className="modal-btn-save">Save changes</CButton>
-        </CModalFooter>
-      </CModal>
+      <CContainer className="employee-modal">
+        <CModal
+          size="xl"
+          visible={visibleXL}
+          onClose={() => setVisibleXL(false)}
+          aria-labelledby="ExtraLargeModalTitle"
+          className="cmodal"
+        >
+          <CModalHeader>
+            <CModalTitle id="ExtraLargeModalTitle">Add New Employee</CModalTitle>
+          </CModalHeader>
+          <CModalBody>
+            <CForm className='modal-form'>
+              <CRow className="mb-3">
+                <CCol xs={12}>
+                  <table className="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <CFormInput
+                            className="modal-input"
+                            type="text"
+                            placeholder="First Name"
+                          />
+                        </td>
+                        <td>
+                          <CFormInput className="modal-input" type="text" placeholder="Last Name" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <CFormInput className="modal-input" type="email" placeholder="Email" />
+                        </td>
+                        <td>
+                          <CFormInput className="modal-input" type="text" placeholder="Username" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <CFormInput
+                            className="modal-input"
+                            type="password"
+                            placeholder="Password"
+                          />
+                        </td>
+                        <td>
+                          <CFormInput
+                            className="modal-input"
+                            type="password"
+                            placeholder="Confirm Password"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <CFormInput
+                            className="modal-input"
+                            type="text"
+                            placeholder="Employee ID"
+                          />
+                        </td>
+                        <td>
+                          <DatePicker
+                            selected={joiningDate}
+                            onChange={(date) => setJoiningDate(date)}
+                            placeholderText="Joining Date"
+                            className="form-control modal-input"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <CFormInput className="modal-input" type="tel" placeholder="Phone" />
+                        </td>
+                        <td>
+                          <CFormInput className="modal-input" type="text" placeholder="Company" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <CFormSelect className="modal-input-select">
+                            <option>Select Designation</option>
+                            <option>Web Developer</option>
+                            <option>App Developer</option>
+                            <option>UI/UX Developer</option>
+                            <option>Video Editor</option>
+                            <option>Manager</option>
+                          </CFormSelect>
+                        </td>
+                        <td>
+                          <CFormSelect className="modal-input-select">
+                            <option>Select Designation</option>
+                            <option>Web Developer</option>
+                            <option>App Developer</option>
+                            <option>UI/UX Developer</option>
+                            <option>Video Editor</option>
+                            <option>Manager</option>
+                          </CFormSelect>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </CCol>
+              </CRow>
+            </CForm>
+          </CModalBody>
+          <CModalFooter>
+            <CButton className="close" onClick={() => setVisibleXL(false)}>
+              Close
+            </CButton>
+            <CButton className="save">Save changes</CButton>
+          </CModalFooter>
+        </CModal>
+      </CContainer>
     </CContainer>
   )
 }
