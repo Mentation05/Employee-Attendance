@@ -165,7 +165,7 @@
   padding: 1.5rem;
   border: 1px solid #dee2e6;
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,7 +256,7 @@
 
     &:focus {
       border-color: #007bff;
-      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+      // box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
     }
   }
 
@@ -382,7 +382,7 @@ h3 {
         &:focus {
           border-color: #80bdff;
           outline: 0;
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
         }
       }
     }

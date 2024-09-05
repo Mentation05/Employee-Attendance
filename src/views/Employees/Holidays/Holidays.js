@@ -63,6 +63,11 @@ export default function Holidays() {
     togglePopup();
   };
 
+  const deleteHoliday = (id) => {
+    const filteredHolidays = holidays.filter(holiday => holiday.id !== id);
+    setHolidays(filteredHolidays);
+  };
+
   return (
     <div className="holidays-page">
       <div className="header">
@@ -89,9 +94,12 @@ export default function Holidays() {
               <td>{holiday.date}</td>
               <td>{holiday.day}</td>
               <td>
-                <div className="action-btn">
-                  <i className="fas fa-ellipsis-h"></i>
-                </div>
+                {/* <div className="action-btn"> */}
+                  <i
+                    className="fas fa-trash delete-icon"
+                    onClick={() => deleteHoliday(holiday.id)}
+                  ></i>
+                {/* </div> */}
               </td>
             </tr>
           ))}
