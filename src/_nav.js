@@ -469,6 +469,24 @@ const _nav = [
     to: '/company-users',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
+  {
+    component: CNavGroup,
+    name: 'Settings',
+    to: '/settings',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Role & Permission',
+        to: '/settings/role-list',
+      },
+      {
+        component: CNavItem,
+        name: 'Notifications',
+        to: '/settings/notification',
+      },
+    ],
+  },
 ]
 
 export default _nav
