@@ -76,7 +76,7 @@ import DailyReport from "./views/HR/Report/Daily/Daily";
 // Connecting Routes
 
 const routes = [
-  { path: '/login', name: 'Login' },
+  { path: '/login', name: 'Login',  element: Login },
 
   { path: '/dashboard', name: 'Dashboard' },
   { path: '/dashboard/admin', name: 'Admin Dashboard', element: AdminDashboard },
