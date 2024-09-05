@@ -29,6 +29,8 @@ import {
   CModalBody,
   CModalFooter,
   CFormTextarea,
+  CPagination,
+  CPaginationItem,
 } from '@coreui/react'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { FaRegCircleDot } from 'react-icons/fa6'
@@ -66,7 +68,147 @@ const LeavesPage = () => {
       statusColor: 'text-danger',
     },
     {
+      id: 7,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
       id: 8,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 9,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 10,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 11,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 12,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 13,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 14,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 15,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 16,
+      name: 'David Wilson',
+      position: 'IT Support',
+      avatar:
+        'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60',
+      leaveType: 'Emergency Leave',
+      startDate: '10 Oct 2019',
+      endDate: '12 Oct 2019',
+      duration: '3 days',
+      reason: 'Car Accident',
+      status: 'Pending',
+      statusColor: 'text-info',
+    },
+    {
+      id: 17,
       name: 'David Wilson',
       position: 'IT Support',
       avatar:
@@ -82,25 +224,37 @@ const LeavesPage = () => {
   ]
 
   const [visible, setVisible] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 10
+
+  // Calculate the total pages
+  const totalPages = Math.ceil(employeeLeaves.length / itemsPerPage)
+
+  // Get the data to display for the current page
+  const currentData = employeeLeaves.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage,
+  )
 
   return (
     <>
-      <CCard className="fluid">
+      <CCard className="leave-container">
         <CCardHeader>
-          <CRow alignItems="center">
+          <CRow className="title">
             <CCol>
               <h3 className="page-title">Admin Leaves</h3>
             </CCol>
             <CCol xs="auto">
               <CButton
                 color="primary"
-                className="btn-sm btn-rounded btns"
+                className="modal-add-button"
                 onClick={() => setVisible(!visible)}
               >
                 <GoPlusCircle /> Add Leave
               </CButton>
             </CCol>
 
+            {/* Modal start */}
             <CModal visible={visible} onClose={() => setVisible(false)} id="add_leave">
               <CModalHeader onClose={() => setVisible(false)}>
                 <CModalTitle>Add Leave</CModalTitle>
@@ -108,7 +262,7 @@ const LeavesPage = () => {
               <CModalBody>
                 <CRow>
                   <CCol xs={12}>
-                    <CFormSelect className="modal-form-label" aria-label="Select Type of Leave">
+                    <CFormSelect className="modal-input-select" aria-label="Select Type of Leave">
                       <option className="modal-option">Select Type of Leave</option>
                       <option className="modal-option" value="1">
                         Casual Leave
@@ -134,10 +288,10 @@ const LeavesPage = () => {
 
                 <CRow className="mt-3">
                   <CCol xs={6}>
-                    <CFormInput className="modal-input" type="number" label="Number of Days" />
+                    <CFormInput className="modal-input" type="text" label="Number of Days" />
                   </CCol>
                   <CCol xs={6}>
-                    <CFormInput className="modal-input" type="number" label="Remaining Leave" />
+                    <CFormInput className="modal-input" type="text" label="Remaining Leave" />
                   </CCol>
                 </CRow>
 
@@ -148,16 +302,17 @@ const LeavesPage = () => {
                 </CRow>
               </CModalBody>
               <CModalFooter>
-                <CButton color="secondary" onClick={() => setVisible(false)}>
+                <CButton className="close" onClick={() => setVisible(false)}>
                   Cancel
                 </CButton>
-                <CButton color="primary">Submit</CButton>
+                <CButton className="save">Submit</CButton>
               </CModalFooter>
             </CModal>
+            {/* Modal ends */}
           </CRow>
         </CCardHeader>
         <CCardBody>
-          <CRow>
+          <CRow className="card-section">
             <CCol md="3" className="mb-4">
               <CCard className="customs-card p-3">
                 <CCardBody>
@@ -196,17 +351,17 @@ const LeavesPage = () => {
             </CCol>
           </CRow>
 
-          <CRow className="filter-row align-items-center">
-            <CCol sm="6" md="2">
+          <CRow className="filter-row align-items-center input-section">
+            <CCol className="input-box" sm="6" md="2">
               <CForm>
-                <CFormLabel className="font">Employee Name</CFormLabel>
-                <CFormInput className="font" placeholder="Employee Name" />
+                <CFormLabel className="default">Employee Name</CFormLabel>
+                <CFormInput className="input" placeholder="Employee Name" />
               </CForm>
             </CCol>
-            <CCol sm="6" md="2">
+            <CCol className="input-box" sm="6" md="2">
               <CForm>
                 <CFormLabel className="default">Leave Type</CFormLabel>
-                <CFormSelect className="select">
+                <CFormSelect className="modal-input-select">
                   <option className="option"> Leave Type</option>
                   <option className="option">Casual Leave</option>
                   <option className="option">Medical Leave</option>
@@ -214,10 +369,10 @@ const LeavesPage = () => {
                 </CFormSelect>
               </CForm>
             </CCol>
-            <CCol sm="6" md="2">
+            <CCol className="input-box" sm="6" md="2">
               <CForm>
                 <CFormLabel className="default">Leave Status</CFormLabel>
-                <CFormSelect className="select">
+                <CFormSelect className="modal-input-select">
                   <option className="option"> Leave Status</option>
                   <option className="option">Pending</option>
                   <option className="option">Approved</option>
@@ -225,64 +380,75 @@ const LeavesPage = () => {
                 </CFormSelect>
               </CForm>
             </CCol>
-            <CCol sm="6" md="2">
+            <CCol className="input-box" sm="6" md="2">
               <CForm>
                 <CFormLabel className="date">From</CFormLabel>
-                <CFormInput className="date" type="date" />
+                <CFormInput className="input" type="date" />
               </CForm>
             </CCol>
-            <CCol sm="6" md="2">
+            <CCol className="input-box" sm="6" md="2">
               <CForm>
                 <CFormLabel className="date" l>
                   To
                 </CFormLabel>
-                <CFormInput className="date" type="date" />
+                <CFormInput className="input" type="date" />
               </CForm>
             </CCol>
-            <CCol sm="6" md="2">
-              <CButton className="font" color="success">
-                Search
-              </CButton>
+            <CCol className="input-box" sm="6" md="2">
+              <CButton className="search">Search</CButton>
             </CCol>
           </CRow>
 
           <CRow>
             <CCol>
               <div className="table-responsive">
-                <CTable hover className="custom-card">
+                <CTable hover className="table-container">
                   <CTableHead>
-                    <CTableRow>
+                    <CTableRow className="table-heading">
                       <CTableHeaderCell>Employee</CTableHeaderCell>
                       <CTableHeaderCell>Leave Type</CTableHeaderCell>
                       <CTableHeaderCell>From</CTableHeaderCell>
                       <CTableHeaderCell>To</CTableHeaderCell>
                       <CTableHeaderCell>Days</CTableHeaderCell>
                       <CTableHeaderCell>Reason</CTableHeaderCell>
-                      <CTableHeaderCell className="text-center">Status</CTableHeaderCell>
-                      <CTableHeaderCell className="text-end">Actions</CTableHeaderCell>
+                      <CTableHeaderCell>Status</CTableHeaderCell>
+                      <CTableHeaderCell>Actions</CTableHeaderCell>
                     </CTableRow>
                   </CTableHead>
-                  <CTableBody>
-                    {employeeLeaves.map((employee) => (
+                  <CTableBody className="table-body">
+                    {currentData.map((employee) => (
                       <CTableRow key={employee.id}>
                         <CTableDataCell>
                           <div className="table-avatar-container">
                             <CAvatar className="avatar" src={employee.avatar} />
                             <div className="info">
-                              <p href="#">{employee.name}</p>
-                              <p className="mb-0 text-muted">
+                              <p className="name" href="#">
+                                {employee.name}
+                              </p>{' '}
+                              &nbsp;
+                              <span className="mb-0 name text-muted">
                                 <small>{employee.position}</small>
-                              </p>
+                              </span>
                             </div>
                           </div>
                         </CTableDataCell>
-                        <CTableDataCell>{employee.leaveType}</CTableDataCell>
-                        <CTableDataCell>{employee.startDate}</CTableDataCell>
-                        <CTableDataCell>{employee.endDate}</CTableDataCell>
-                        <CTableDataCell>{employee.duration}</CTableDataCell>
-                        <CTableDataCell>{employee.reason}</CTableDataCell>
-                        <CTableDataCell className="text-center">
-                          <CDropdown>
+                        <CTableDataCell className="text-start mont">
+                          {employee.leaveType}
+                        </CTableDataCell>
+                        <CTableDataCell className="text-start mont">
+                          {employee.startDate}
+                        </CTableDataCell>
+                        <CTableDataCell className="text-start mont">
+                          {employee.endDate}
+                        </CTableDataCell>
+                        <CTableDataCell className="text-start mont">
+                          {employee.duration}
+                        </CTableDataCell>
+                        <CTableDataCell className="text-start mont">
+                          {employee.reason}
+                        </CTableDataCell>
+                        <CTableDataCell className="text-start mont">
+                          <CDropdown className="dropdownscontainer">
                             <CDropdownToggle
                               color="white"
                               className={`btn-sm btn-rounded d-flex align-items-center ${employee.statusColor}`}
@@ -291,46 +457,33 @@ const LeavesPage = () => {
                               <span className="ms-2">{employee.status}</span>
                               <IoMdArrowDropdown className="ms-2" />
                             </CDropdownToggle>
-                            <CDropdownMenu>
-                              <CDropdownItem href="#">
+                            <CDropdownMenu className="dropdwonmenus">
+                              <CDropdownItem className="dropdownItems">
                                 <FaRegCircleDot className="text-primary" /> New
                               </CDropdownItem>
-                              <CDropdownItem href="#">
+                              <CDropdownItem className="dropdownItems">
                                 <FaRegCircleDot className="text-info" /> Pending
                               </CDropdownItem>
-                              <CDropdownItem
-                                href="#"
-                                data-bs-toggle="modal"
-                                data-bs-target="#approve_leave"
-                              >
-                                <FaRegCircleDot className=" text-success" /> Approved
+                              <CDropdownItem className="dropdownItems">
+                                <FaRegCircleDot className="text-success" /> Approved
                               </CDropdownItem>
-                              <CDropdownItem href="#">
-                                <FaRegCircleDot className=" text-danger" /> Declined
+                              <CDropdownItem className="dropdownItems">
+                                <FaRegCircleDot className="text-danger" /> Rejected
                               </CDropdownItem>
                             </CDropdownMenu>
                           </CDropdown>
                         </CTableDataCell>
-                        <CTableDataCell className="text-end">
-                          <CDropdown alignment="end">
-                            <CDropdownToggle color="link">
+                        <CTableDataCell className="text-start mont">
+                          <CDropdown className="actions-container">
+                            <CDropdownToggle
+                              color="white"
+                              className="btn-sm btn-rounded d-flex align-items-center"
+                            >
                               <BsThreeDotsVertical />
                             </CDropdownToggle>
-                            <CDropdownMenu>
-                              <CDropdownItem
-                                href="#"
-                                data-bs-toggle="modal"
-                                data-bs-target="#edit_leave"
-                              >
-                                <i className="fa-solid fa-pencil"></i> Edit
-                              </CDropdownItem>
-                              <CDropdownItem
-                                href="#"
-                                data-bs-toggle="modal"
-                                data-bs-target="#delete_approve"
-                              >
-                                <i className="fa-regular fa-trash-can"></i> Delete
-                              </CDropdownItem>
+                            <CDropdownMenu className="dropdownmenus">
+                              <CDropdownItem className="dropdownItems">Edit</CDropdownItem>
+                              <CDropdownItem className="dropdownItems">Delete</CDropdownItem>
                             </CDropdownMenu>
                           </CDropdown>
                         </CTableDataCell>
@@ -341,6 +494,32 @@ const LeavesPage = () => {
               </div>
             </CCol>
           </CRow>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <CPagination aria-label="Page navigation pagination">
+              <CPaginationItem
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(currentPage - 1)}
+              >
+                Previous
+              </CPaginationItem>
+              {[...Array(totalPages)].map((_, i) => (
+                <CPaginationItem
+                  key={i}
+                  active={i + 1 === currentPage}
+                  onClick={() => setCurrentPage(i + 1)}
+                >
+                  {i + 1}
+                </CPaginationItem>
+              ))}
+              <CPaginationItem
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(currentPage + 1)}
+              >
+                Next
+              </CPaginationItem>
+            </CPagination>
+          )}
         </CCardBody>
       </CCard>
     </>

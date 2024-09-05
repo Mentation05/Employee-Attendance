@@ -19,7 +19,7 @@ export default function Holidays() {
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
-    setErrorMessage("");  
+    setErrorMessage("");
   };
 
   const handleInputChange = (e) => {
@@ -109,6 +109,7 @@ export default function Holidays() {
               name="title"
               value={newHoliday.title}
               onChange={handleInputChange}
+              placeholder='title'
             />
             <label>Holiday Date:</label>
             <input
@@ -118,8 +119,8 @@ export default function Holidays() {
               onChange={handleInputChange}
             />
             <div className="popup-actions">
-              <button onClick={addHoliday}>Add Holiday</button>
-              <button onClick={togglePopup}>Cancel</button>
+              <button className='close' onClick={togglePopup}>Cancel</button>
+              <button className='save' onClick={addHoliday}>Add Holiday</button>
             </div>
           </div>
         </div>

@@ -17,7 +17,306 @@
 // raect date peaker css
 @import 'react-datepicker/dist/react-datepicker.css';
 
+/* Technor */
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/3JSP7EUBMKB5VFTQHQQRMCTITT4UR7TW/QW2F5WPZCOKGB6XZGBYCEV4CNLFOI4IM/X2KXO4RSGJK3OCU3MWE6ISYTAG2SG4PD.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/3JSP7EUBMKB5VFTQHQQRMCTITT4UR7TW/QW2F5WPZCOKGB6XZGBYCEV4CNLFOI4IM/X2KXO4RSGJK3OCU3MWE6ISYTAG2SG4PD.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/3JSP7EUBMKB5VFTQHQQRMCTITT4UR7TW/QW2F5WPZCOKGB6XZGBYCEV4CNLFOI4IM/X2KXO4RSGJK3OCU3MWE6ISYTAG2SG4PD.ttf')
+      format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/JUUEBSMZVXJ6I7B3I6GNSFFSK4FCNQAP/YAJBJYJB7SLDKHW27QPSJTUI5SHEC6PO/4W3C6YEZFM46SGQOVM7ZAFLE7R7ZSH3W.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/JUUEBSMZVXJ6I7B3I6GNSFFSK4FCNQAP/YAJBJYJB7SLDKHW27QPSJTUI5SHEC6PO/4W3C6YEZFM46SGQOVM7ZAFLE7R7ZSH3W.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/JUUEBSMZVXJ6I7B3I6GNSFFSK4FCNQAP/YAJBJYJB7SLDKHW27QPSJTUI5SHEC6PO/4W3C6YEZFM46SGQOVM7ZAFLE7R7ZSH3W.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/NF4IWRA6PNPPIYDTGS5XRNNMVEGVLZIX/DRSFIAYLKTCDDRGPFVNKKZB2FQOWN2HB/JCAROJ7ESNRN2KMIVGFFBB2ZPRGTA24L.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/NF4IWRA6PNPPIYDTGS5XRNNMVEGVLZIX/DRSFIAYLKTCDDRGPFVNKKZB2FQOWN2HB/JCAROJ7ESNRN2KMIVGFFBB2ZPRGTA24L.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/NF4IWRA6PNPPIYDTGS5XRNNMVEGVLZIX/DRSFIAYLKTCDDRGPFVNKKZB2FQOWN2HB/JCAROJ7ESNRN2KMIVGFFBB2ZPRGTA24L.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/CJ3XQVIZSRO52PWM6W6GTGX5AWN4M5XL/L2V5FYPUD5V63QKTSZRFX5TXNYFA5KU3/5MAYRGCMTMRCXUVBL7YAI7HRIFOKW24L.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/CJ3XQVIZSRO52PWM6W6GTGX5AWN4M5XL/L2V5FYPUD5V63QKTSZRFX5TXNYFA5KU3/5MAYRGCMTMRCXUVBL7YAI7HRIFOKW24L.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/CJ3XQVIZSRO52PWM6W6GTGX5AWN4M5XL/L2V5FYPUD5V63QKTSZRFX5TXNYFA5KU3/5MAYRGCMTMRCXUVBL7YAI7HRIFOKW24L.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/2RR55QNKFIVA2DCEDQJRXWOZKE4YYPU4/RZDLLS5TODK64HYRKXCPMNO6XI7GKFTY/DLYUQXINIV7BZZYOIGWGWXKAW6FHXPI6.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/2RR55QNKFIVA2DCEDQJRXWOZKE4YYPU4/RZDLLS5TODK64HYRKXCPMNO6XI7GKFTY/DLYUQXINIV7BZZYOIGWGWXKAW6FHXPI6.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/2RR55QNKFIVA2DCEDQJRXWOZKE4YYPU4/RZDLLS5TODK64HYRKXCPMNO6XI7GKFTY/DLYUQXINIV7BZZYOIGWGWXKAW6FHXPI6.ttf')
+      format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/RZYHTNGMAM277HHQBAANMAMZAK2RASOJ/ZMFNEW255W5MH35ANX3VS4OA2VGPLJ6V/MRUFJCB2XBGJKEWAZRVXWUXXFT2Z7TDZ.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/RZYHTNGMAM277HHQBAANMAMZAK2RASOJ/ZMFNEW255W5MH35ANX3VS4OA2VGPLJ6V/MRUFJCB2XBGJKEWAZRVXWUXXFT2Z7TDZ.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/RZYHTNGMAM277HHQBAANMAMZAK2RASOJ/ZMFNEW255W5MH35ANX3VS4OA2VGPLJ6V/MRUFJCB2XBGJKEWAZRVXWUXXFT2Z7TDZ.ttf')
+      format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/2D4THMSKJGRDCBT6A6VWG4SNWKTAS3I2/KYTPQO6L7FPQHAZ4NUY6LX3ZE4BITSGS/2QZ2ZOKTT7SJC5TJNAK23KA3JCADVWDL.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/2D4THMSKJGRDCBT6A6VWG4SNWKTAS3I2/KYTPQO6L7FPQHAZ4NUY6LX3ZE4BITSGS/2QZ2ZOKTT7SJC5TJNAK23KA3JCADVWDL.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/2D4THMSKJGRDCBT6A6VWG4SNWKTAS3I2/KYTPQO6L7FPQHAZ4NUY6LX3ZE4BITSGS/2QZ2ZOKTT7SJC5TJNAK23KA3JCADVWDL.ttf')
+      format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src:
+    url('//cdn.fontshare.com/wf/H24CDKHEVFT7VMEKEAMBO4CDKYCYCADH/5GC5PFP4RRVV5U2J36ZYOZGV6AWWHIMD/YFYSWSSMGACJCYW3MMXEH33GQBMRFKTE.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/H24CDKHEVFT7VMEKEAMBO4CDKYCYCADH/5GC5PFP4RRVV5U2J36ZYOZGV6AWWHIMD/YFYSWSSMGACJCYW3MMXEH33GQBMRFKTE.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/H24CDKHEVFT7VMEKEAMBO4CDKYCYCADH/5GC5PFP4RRVV5U2J36ZYOZGV6AWWHIMD/YFYSWSSMGACJCYW3MMXEH33GQBMRFKTE.ttf')
+      format('truetype');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Ranade */
+@font-face {
+  font-family: 'Ranade';
+  src:
+    url('//cdn.fontshare.com/wf/L5FIDTVUREF47ZIMK4SAWFIM3RQHGDRR/DDQOLYOU6G7WW4V2YVREV3FNKPCID7UW/L5RECMN3L4DWXPPVTDJQP3FAU32IQIX5.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/L5FIDTVUREF47ZIMK4SAWFIM3RQHGDRR/DDQOLYOU6G7WW4V2YVREV3FNKPCID7UW/L5RECMN3L4DWXPPVTDJQP3FAU32IQIX5.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/L5FIDTVUREF47ZIMK4SAWFIM3RQHGDRR/DDQOLYOU6G7WW4V2YVREV3FNKPCID7UW/L5RECMN3L4DWXPPVTDJQP3FAU32IQIX5.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Excon */
+@font-face {
+  font-family: 'Excon';
+  src:
+    url('//cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
 $tech: 'Technor', sans-serif;
 $mont: 'Montserrat', sans-serif;
 $unbounded: 'Unbounded', sans-serif;
 $boxShadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+
+::placeholder {
+  font-family: $mont;
+  color: rgb(84, 62, 230) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.close {
+  background-color: #ffaaaa !important;
+  font-family: $mont;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  box-shadow: none !important;
+}
+
+.save {
+  padding: 10px;
+  background-color: #a1dd70 !important;
+  font-family: $mont;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.modal-input {
+  font-family: $mont !important;
+  border: 1px solid #000 !important;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.modal-input-select {
+  font-family: $mont !important;
+  border: 1px solid #000000 !important;
+  outline: none !important;
+  font-size: 14px !important;
+  cursor: pointer;
+  font-weight: 500 !important;
+  background-color: #f2f2f2 !important;
+  box-shadow: none !important;
+}
+
+.modal-add-button {
+  background-color: #a1dd70;
+  color: #000000;
+  font-family: $mont;
+  font-weight: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px 14px !important;
+  outline: none !important;
+}
+
+.input {
+  border: 1px solid #000000 !important;
+  border-radius: 5px;
+  font-family: $mont;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.search {
+  align-self: center;
+  color: #000000;
+  font-size: 17px;
+  padding: 0.3rem 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-top: 2rem;
+  border: 1px solid #000;
+  background-color: #a1dd70;
+  font-family: $mont;
+  color: #000;
+
+  &:hover {
+    background-color: rgba(153, 205, 50, 0.672);
+    color: #000;
+  }
+}
+
+.mont {
+  font-family: $mont;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.dropdown-toggle::after {
+  visibility: hidden;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  border-radius: 0.25rem;
+}
+
+.pagination-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.125rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  color: #495057;
+  background-color: #f8f9fa;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #dee2e6;
+    color: #495057;
+  }
+
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    pointer-events: none;
+  }
+
+  &.disabled {
+    color: #6c757d;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    pointer-events: none;
+  }
+}
+
+.pagination-item:first-child {
+  margin-left: 0;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item:not(.active) {
+  &:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+}
