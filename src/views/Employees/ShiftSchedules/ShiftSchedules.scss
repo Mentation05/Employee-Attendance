@@ -1,0 +1,78 @@
+.shift-schedule {
+    padding: 20px;
+  
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+  
+      input {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+  
+      button {
+        padding: 10px 20px;
+        background-color: #1abc9c;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      .employee {
+        span {
+          display: block;
+        }
+      }
+  
+      .shift {
+        background-color: #eef9f5;
+        padding: 10px;
+        border: 1px dashed #1abc9c;
+        text-align: center;
+  
+        span {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+  
+      .add-shift-btn {
+        background-color: #fff;
+        border: 1px dashed #ddd;
+        color: #1abc9c;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+  
+      button {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px 20px;
+        margin: 0 5px;
+        cursor: pointer;
+  
+        &.active {
+          background-color: #1abc9c;
+          color: white;
+        }
+      }
+    }
+  }
+  

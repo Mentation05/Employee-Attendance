@@ -1,0 +1,70 @@
+.user-report {
+    display: flex;
+  
+    .main-content {
+      width: 100%;
+      padding: 20px;
+      
+      .report-content {
+        .breadcrumb {
+          font-size: 14px;
+          color: gray;
+        }
+  
+        h2 {
+          margin-bottom: 20px;
+        }
+  
+        .filter {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+  
+          select {
+            padding: 5px;
+          }
+  
+          .btn-search {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+          }
+        }
+  
+        .user-table {
+          width: 100%;
+          border-collapse: collapse;
+          
+          th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+          }
+  
+          .badge {
+            padding: 5px;
+            border-radius: 4px;
+            &.client {
+              background-color: #e0f7fa;
+              color: #00796b;
+            }
+            &.admin {
+              background-color: #ffebee;
+              color: #c62828;
+            }
+          }
+  
+          .status {
+            padding: 5px;
+            border-radius: 12px;
+            &.active {
+              background-color: #e8f5e9;
+              color: #388e3c;
+            }
+          }
+        }
+      }
+    }
+  }
+  
