@@ -1,4 +1,5 @@
-@import '../../../scss/style.scss';
+@import '../../../scss/variables.scss';
+@import '../../../scss/style.scss'; // Ensure the variables are imported first
 
 .login-container {
   .main-container {
@@ -32,7 +33,7 @@
         form {
           .input {
 
-            label{
+            label {
               color: #bbc4e1;
               font-family: $tech;
               font-size: 16px;
@@ -58,13 +59,12 @@
             }
           }
 
-          button{
+          button {
             margin-top: 4px;
             border: 1px solid #eee;
             font-family: $unbound;
             padding: 10px;
           }
-
         }
       }
     }
