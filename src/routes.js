@@ -1,101 +1,78 @@
 import { element } from 'prop-types'
 import React from 'react'
 // ----------------------------------------------------------------//
+import Employee from './views/Employees/Employee/Emloyee'
+import Leave from './views/Employees/Leave/Leave'
+import Holidays from './views/Employees/Holidays/Holidays'
+import EmployeeLeave from './views/Employees/EmployeeLeave/EmployeeLeave'
+import LeaveSettings from './views/Employees/LeaveSettings/LeaveSettings'
+import AttendenceAdmin from './views/Employees/AttendenceAdmin/AttendenceAdmin'
+import AttendenceEmployee from './views/Employees/AttendenceEmployee/AttendenceEmployee'
+import Departments from './views/Employees/Departments/Departments'
+import Designations from './views/Employees/Designations/Designations'
+import TimeSheet from './views/Employees/TimeSheet/TimeSheet'
+import ShiftSchedules from './views/Employees/ShiftSchedules/ShiftSchedules'
+import OverTime from './views/Employees/OverTime/OverTime'
+import Clients from './views/Clients-page/Clients'
+import Contacts from './views/CRM/Contact/Contact'
+import Companies from './views/CRM/Companies/Companies'
+import Deals from './views/CRM/Deals/Deal'
+import Activity from './views/CRM/Activity/Activity'
+import Lead from './views/CRM/Lead/Lead'
+import EstimatesSales from './views/HR/Sales/EstimatesSales/EstimatesSales'
+import Invoices from './views/HR/Sales/Invoices/Invoices'
+import Payments from './views/HR/Sales/Payements/Payements'
+import Expenses from './views/HR/Sales/Expenses/Expenses'
+import PprovidentFund from './views/HR/Sales/Provident-Fund/Provident-Fund'
+import Taxes from './views/HR/Sales/Taxes/Taxes'
+import Categories from './views/HR/Accounting/Categories/Categories'
+import Budgets from './views/HR/Accounting/Budgest/Budgets'
+import BudgetsExpenses from './views/HR/Accounting/BudgetsExpenses/BudgetsExpenses'
+import BudgetsRevenues from './views/HR/Accounting/BudgetsRevenues/BudgetsRevenues'
 
-const Login = React.lazy(() => import('./views/pages/login/Login'))
-const Employee = React.lazy(() => import('./views/Employees/Employee/Emloyee'))
-const Leave = React.lazy(() => import('./views/Employees/Leave/Leave'))
-const Holidays = React.lazy(() => import('./views/Employees/Holidays/Holidays'))
-const EmployeeLeave = React.lazy(() => import('./views/Employees/EmployeeLeave/EmployeeLeave'))
-const LeaveSettings = React.lazy(() => import('./views/Employees/LeaveSettings/LeaveSettings'))
-const AttendenceAdmin = React.lazy(
-  () => import('./views/Employees/AttendenceAdmin/AttendenceAdmin'),
-)
-const AttendenceEmployee = React.lazy(
-  () => import('./views/Employees/AttendenceEmployee/AttendenceEmployee'),
-)
-const Departments = React.lazy(() => import('./views/Employees/Departments/Departments'))
-const Designations = React.lazy(() => import('./views/Employees/Designations/Designations'))
-const TimeSheet = React.lazy(() => import('./views/Employees/TimeSheet/TimeSheet'))
-const ShiftSchedules = React.lazy(() => import('./views/Employees/ShiftSchedules/ShiftSchedules'))
-const OverTime = React.lazy(() => import('./views/Employees/OverTime/OverTime'))
+import EmployeePolices from './views/HR/polices/EmployeePolices/EmployeePolices'
+import EmployeeSalary from './views/HR/Payroll/EmployeeSalary/EmployeeSalary'
+import Payslip from './views/HR/Payroll/Payslip/Payslip'
+import PayrollItems from './views/HR/Payroll/PayrollItems/PayrollItems'
+import ConpanyPolices from './views/HR/polices/ConpanyPolices/ConpanyPolices'
 
-const Clients = React.lazy(() => import('./views/Clients-page/Clients'))
+import ExpenseReports from './views/HR/Report/ExpenseReports/ExpenseReports'
+import InvoiceReport from './views/HR/Report/InvoiceReport/InvoiceReport'
+import PaymentReport from './views/HR/Report/PaymentReport/PaymentReport'
+import ProjectReport from './views/HR/Report/ProjectReport/ProjectReport'
+import TaskReport from './views/HR/Report/Task/Task'
+import UserReport from './views/HR/Report/User/User'
+import EmployeeReport from './views/HR/Report/Employee/Employe'
+import PayslipReport from './views/HR/Payroll/Payslip/Payslip'
+import PerformanceIndicator from './views/Performance/Performance/PerformanceIndicator/PerformanceIndicator'
+import PerformanceReviews from './views/Performance/Performance/PerformanceReviews/PerformanceReviews'
+import PerformanceAppraisal from './views/Performance/Performance/PerformanceAppraisal/PerformanceAppraisal'
 
-const Contacts = React.lazy(() => import('./views/CRM/Contact/Contact'))
+import GoalList from './views/Performance/Goal/GoalList/GoalList'
+import GoalType from './views/Performance/Goal/GoalType/GoalType'
+import TrainingList from './views/Performance/Traning/TranningList/TranningList'
+import Trainers from './views/Performance/Traning/Trainers/Trainers'
+import TrainingType from './views/Performance/Traning/TraningType/TraningType'
+import Promotions from './views/Performance/Promotions/Promotions'
+import Resigination from './views/Performance/Resigination/Resigination'
+import Terminatation from './views/Performance/Terminatation/Terminatation'
+import CompanyAssets from './views/CompanyAssets/CompanyAssets'
+import CompanyUsers from './views/CompanyUsers/CompanyUsers'
+import ChatApp from './views/Application/Chat/Chat'
+import CallApp from './views/Application/Call/Call'
+import EmailApp from './views/Application/Email/Email'
+import calendar from './views/Application/Calendar/Calendar';
+import AdminDashboard from './views/Dashboard/AdminDashboard/AdminDashboard'
+import EmployeeDashboard from './views/Dashboard/EmployeeDashboard/EmployeeDashboard'
+import AdminLeads from './views/CRM/Lead/Lead'
+import AdminDeals from './views/CRM/Deals/Deal'
+import ClientsProfile from './views/Clients-page/Client-Profile'
+import Role from './views/Settingss/SettingsPage/SettingsPage'
+import Notification from './views/Settingss/Notificationpage/Notificationpage'
+import AttendenceReport from "./views/HR/Report/Attendence/Attendence";
+import LeaveReport from "./views/HR/Report/Leave/Leave";
+import DailyReport from "./views/HR/Report/Daily/Daily";
 
-const Companies = React.lazy(() => import('./views/CRM/Companies/Companies'))
-
-const Deals = React.lazy(() => import('./views/CRM/Deals/Deal'))
-const Lead = React.lazy(() => import('./views/CRM/Lead/Lead'))
-const Activity = React.lazy(() => import('./views/CRM/Activity/Activity'))
-const EstimatesSales = React.lazy(() => import('./views/HR/Sales/EstimatesSales/EstimatesSales'))
-const Invoices = React.lazy(() => import('./views/HR/Sales/Invoices/Invoices'))
-const Payments = React.lazy(() => import('./views/HR/Sales/Payements/Payements'))
-const Expenses = React.lazy(() => import('./views/HR/Sales/Expenses/Expenses'))
-const PprovidentFund = React.lazy(() => import('./views/HR/Sales/Provident-Fund/Provident-Fund'))
-const Taxes = React.lazy(() => import('./views/HR/Sales/Taxes/Taxes'))
-const Categories = React.lazy(() => import('./views/HR/Accounting/Categories/Categories'))
-const Budgets = React.lazy(() => import('./views/HR/Accounting/Budgest/Budgets'))
-const BudgetsExpenses = React.lazy(
-  () => import('./views/HR/Accounting/BudgetsExpenses/BudgetsExpenses'),
-)
-const BudgetsRevenues = React.lazy(
-  () => import('./views/HR/Accounting/BudgetsRevenues/BudgetsRevenues'),
-)
-const EmployeeSalary = React.lazy(() => import('./views/HR/Payroll/EmployeeSalary/EmployeeSalary'))
-const Payslip = React.lazy(() => import('./views/HR/Payroll/Payslip/Payslip'))
-const PayrollItems = React.lazy(() => import('./views/HR/Payroll/PayrollItems/PayrollItems'))
-const ConpanyPolices = React.lazy(() => import('./views/HR/polices/ConpanyPolices/ConpanyPolices'))
-const EmployeePolices = React.lazy(
-  () => import('./views/HR/polices/EmployeePolices/EmployeePolices'),
-)
-const ExpenseReports = React.lazy(() => import('./views/HR/Report/ExpenseReports/ExpenseReports'))
-const InvoiceReports = React.lazy(() => import('./views/HR/Report/InvoiceReport/InvoiceReport'))
-const PaymentReport = React.lazy(() => import('./views/HR/Report/PaymentReport/PaymentReport'))
-const ProjectReport = React.lazy(() => import('./views/HR/Report/ProjectReport/ProjectReport'))
-const TaskReport = React.lazy(() => import('./views/HR/Report/Task/Task'))
-const UserReport = React.lazy(() => import('./views/HR/Report/User/User'))
-const EmployeeReport = React.lazy(() => import('./views/HR/Report/Employee/Employe'))
-const PayslipReport = React.lazy(() => import('./views/HR/Report/Payslip/Payslip'))
-const AttendenceReport = React.lazy(() => import('./views/HR/Report/Attendence/Attendence'))
-const LeaveReport = React.lazy(() => import('./views/HR/Report/Leave/Leave'))
-const DailyReport = React.lazy(() => import('./views/HR/Report/Daily/Daily'))
-const PerformanceIndicator = React.lazy(
-  () => import('./views/Performance/Performance/PerformanceIndicator/PerformanceIndicator'),
-)
-const PerformanceReview = React.lazy(
-  () => import('./views/Performance/Performance/PerformanceReviews/PerformanceReviews'),
-)
-const PerformanceAppraisal = React.lazy(
-  () => import('./views/Performance/Performance/PerformanceAppraisal/PerformanceAppraisal'),
-)
-const GoalList = React.lazy(() => import('./views/Performance/Goal/GoalList/GoalList'))
-const GoalType = React.lazy(() => import('./views/Performance/Goal/GoalType/GoalType'))
-const TrainingList = React.lazy(
-  () => import('./views/Performance/Traning/TranningList/TranningList'),
-)
-const Trainers = React.lazy(() => import('./views/Performance/Traning/Trainers/Trainers'))
-const TrainingType = React.lazy(() => import('./views/Performance/Traning/TraningType/TraningType'))
-const Promotions = React.lazy(() => import('./views/Performance/Promotions/Promotions'))
-const Resigination = React.lazy(() => import('./views/Performance/Resigination/Resigination'))
-const Terminatation = React.lazy(() => import('./views/Performance/Terminatation/Terminatation'))
-const CompanyAssets = React.lazy(() => import('./views/CompanyAssets/CompanyAssets'))
-const CompanyUsers = React.lazy(() => import('./views/CompanyUsers/CompanyUsers'))
-const ChatApp = React.lazy(() => import('./views/Application/Chat/Chat'))
-const CallApp = React.lazy(() => import('./views/Application/Call/Call'))
-const EmailApp = React.lazy(() => import('./views/Application/Email/Email'))
-const calendar = React.lazy(() => import('./views/Application/Calendar/Calendar'))
-const AdminDashboard = React.lazy(() => import('./views/Dashboard/AdminDashboard/AdminDashboard'))
-const EmployeeDashboard = React.lazy(
-  () => import('./views/Dashboard/EmployeeDashboard/EmployeeDashboard'),
-)
-const AdminLeads = React.lazy(() => import('./views/Dashboard/Leads/Leads'));
-const AdminDeals = React.lazy(() => import('./views/Dashboard/Deals/Deals'))
-
-const ClientsProfile = React.lazy(() => import('./views/Clients-page/Client-Profile'))
-import Role from './views/Settingss/SettingsPage/SettingsPage';
-import Notification from "./views/Settingss/Notificationpage/Notificationpage";
 // Connecting Routes
 
 const routes = [
@@ -157,7 +134,7 @@ const routes = [
   { path: '/polices/employee-polices', name: 'Employee Polices', element: EmployeePolices },
   { path: '/report', name: 'Reports' },
   { path: '/report/expense-report', name: 'Expense Reports', element: ExpenseReports },
-  { path: '/report/invoices-report', name: 'Invoices Reports', element: InvoiceReports },
+  { path: '/report/invoices-report', name: 'Invoices Reports', element: InvoiceReport },
   { path: '/report/payments-report', name: 'Payments Reports', element: PaymentReport },
   { path: '/report/projects-report', name: 'Project Reports', element: ProjectReport },
   { path: '/report/task-report', name: 'Task Reports', element: TaskReport },
@@ -176,7 +153,7 @@ const routes = [
   {
     path: '/performance/performance-review',
     name: 'Performance Review',
-    element: PerformanceReview,
+    element: PerformanceReviews,
   },
   {
     path: '/performance/performance-appraisal',
@@ -198,9 +175,8 @@ const routes = [
 
   { path: '/clients-profile', name: 'Clients-Profile', element: ClientsProfile },
   { path: '/settings', name: 'Settings' },
-  { path: "/settings/role-list", name: 'Role & Permission', element: Role },
-  {path:'/settings/notification', name:'Notifications', element: Notification}
-
+  { path: '/settings/role-list', name: 'Role & Permission', element: Role },
+  { path: '/settings/notification', name: 'Notifications', element: Notification },
 ]
 
 export default routes
