@@ -102,7 +102,7 @@ const ClientsProfile = React.lazy(() => import('./views/Clients-page/Client-Prof
 // Connecting Routes
 
 const routes = [
-  { path: '/login', name: 'Login' },
+  { path: '/login', name: 'Login',  element: Login },
 
   { path: '/dashboard', name: 'Dashboard' },
   { path: '/dashboard/admin', name: 'Admin Dashboard', element: AdminDashboard },
