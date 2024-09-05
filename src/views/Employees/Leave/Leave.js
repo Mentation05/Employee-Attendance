@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import { React, useState } from 'react'
 import './Leave.scss'
 import {
   CContainer,
@@ -36,7 +36,6 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 import { GoPlusCircle } from 'react-icons/go'
 
 const LeavesPage = () => {
-
   const employeeLeaves = [
     {
       id: 5,
@@ -82,7 +81,7 @@ const LeavesPage = () => {
     },
   ]
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
 
   return (
     <>
@@ -93,62 +92,68 @@ const LeavesPage = () => {
               <h3 className="page-title">Admin Leaves</h3>
             </CCol>
             <CCol xs="auto">
-        <CButton
-          color="primary"
-          className="btn-sm btn-rounded btns"
-          onClick={() => setVisible(!visible)}
-        >
-          <GoPlusCircle /> Add Leave
-        </CButton>
-      </CCol>
+              <CButton
+                color="primary"
+                className="btn-sm btn-rounded btns"
+                onClick={() => setVisible(!visible)}
+              >
+                <GoPlusCircle /> Add Leave
+              </CButton>
+            </CCol>
 
-      <CModal visible={visible} onClose={() => setVisible(false)} id="add_leave">
-        <CModalHeader onClose={() => setVisible(false)}>
-          <CModalTitle>Add Leave</CModalTitle>
-        </CModalHeader>
-        <CModalBody>
-          <CRow>
-            <CCol xs={12}>
-              <CFormSelect className='modal-form-label' aria-label="Select Type of Leave">
-                <option className='modal-option'>Select Type of Leave</option>
-                <option className='modal-option' value="1">Casual Leave</option>
-                <option className='modal-option' value="2">Sick Leave</option>
-                <option className='modal-option' value="3">Earned Leave</option>
-              </CFormSelect>
-            </CCol>
-          </CRow>
+            <CModal visible={visible} onClose={() => setVisible(false)} id="add_leave">
+              <CModalHeader onClose={() => setVisible(false)}>
+                <CModalTitle>Add Leave</CModalTitle>
+              </CModalHeader>
+              <CModalBody>
+                <CRow>
+                  <CCol xs={12}>
+                    <CFormSelect className="modal-form-label" aria-label="Select Type of Leave">
+                      <option className="modal-option">Select Type of Leave</option>
+                      <option className="modal-option" value="1">
+                        Casual Leave
+                      </option>
+                      <option className="modal-option" value="2">
+                        Sick Leave
+                      </option>
+                      <option className="modal-option" value="3">
+                        Earned Leave
+                      </option>
+                    </CFormSelect>
+                  </CCol>
+                </CRow>
 
-          <CRow className="mt-3">
-            <CCol xs={6}>
-              <CFormInput className='modal-input' type="date" label="From Date" />
-            </CCol>
-            <CCol xs={6}>
-              <CFormInput className='modal-input' type="date" label="To Date" />
-            </CCol>
-          </CRow>
+                <CRow className="mt-3">
+                  <CCol xs={6}>
+                    <CFormInput className="modal-input" type="date" label="From Date" />
+                  </CCol>
+                  <CCol xs={6}>
+                    <CFormInput className="modal-input" type="date" label="To Date" />
+                  </CCol>
+                </CRow>
 
-          <CRow className="mt-3">
-            <CCol xs={6}>
-              <CFormInput className='modal-input' type="number" label="Number of Days" />
-            </CCol>
-            <CCol xs={6}>
-              <CFormInput className='modal-input' type="number" label="Remaining Leave" />
-            </CCol>
-          </CRow>
+                <CRow className="mt-3">
+                  <CCol xs={6}>
+                    <CFormInput className="modal-input" type="number" label="Number of Days" />
+                  </CCol>
+                  <CCol xs={6}>
+                    <CFormInput className="modal-input" type="number" label="Remaining Leave" />
+                  </CCol>
+                </CRow>
 
-          <CRow className="mt-3">
-            <CCol xs={12}>
-              <CFormTextarea className='modal-input' label="Leave Summary" rows="3" />
-            </CCol>
-          </CRow>
-        </CModalBody>
-        <CModalFooter>
-          <CButton color="secondary" onClick={() => setVisible(false)}>
-            Cancel
-          </CButton>
-          <CButton color="primary">Submit</CButton>
-        </CModalFooter>
-      </CModal>
+                <CRow className="mt-3">
+                  <CCol xs={12}>
+                    <CFormTextarea className="modal-input" label="Leave Summary" rows="3" />
+                  </CCol>
+                </CRow>
+              </CModalBody>
+              <CModalFooter>
+                <CButton color="secondary" onClick={() => setVisible(false)}>
+                  Cancel
+                </CButton>
+                <CButton color="primary">Submit</CButton>
+              </CModalFooter>
+            </CModal>
           </CRow>
         </CCardHeader>
         <CCardBody>
@@ -194,46 +199,48 @@ const LeavesPage = () => {
           <CRow className="filter-row align-items-center">
             <CCol sm="6" md="2">
               <CForm>
-                <CFormLabel className='font'>Employee Name</CFormLabel>
-                <CFormInput className='font' placeholder="Employee Name" />
+                <CFormLabel className="font">Employee Name</CFormLabel>
+                <CFormInput className="font" placeholder="Employee Name" />
               </CForm>
             </CCol>
             <CCol sm="6" md="2">
               <CForm>
-                <CFormLabel className='default'>Leave Type</CFormLabel>
-                <CFormSelect className='select'>
-                  <option className='option'> Leave Type</option>
-                  <option className='option'>Casual Leave</option>
-                  <option className='option'>Medical Leave</option>
-                  <option className='option'>Loss of Pay</option>
+                <CFormLabel className="default">Leave Type</CFormLabel>
+                <CFormSelect className="select">
+                  <option className="option"> Leave Type</option>
+                  <option className="option">Casual Leave</option>
+                  <option className="option">Medical Leave</option>
+                  <option className="option">Loss of Pay</option>
                 </CFormSelect>
               </CForm>
             </CCol>
             <CCol sm="6" md="2">
               <CForm>
-                <CFormLabel className='default'>Leave Status</CFormLabel>
-                <CFormSelect className='select'>
-                  <option className='option'> Leave Status</option>
-                  <option className='option'>Pending</option>
-                  <option className='option'>Approved</option>
-                  <option className='option'>Rejected</option>
+                <CFormLabel className="default">Leave Status</CFormLabel>
+                <CFormSelect className="select">
+                  <option className="option"> Leave Status</option>
+                  <option className="option">Pending</option>
+                  <option className="option">Approved</option>
+                  <option className="option">Rejected</option>
                 </CFormSelect>
               </CForm>
             </CCol>
             <CCol sm="6" md="2">
               <CForm>
-                <CFormLabel className='date'>From</CFormLabel>
-                <CFormInput className='date' type="date" />
+                <CFormLabel className="date">From</CFormLabel>
+                <CFormInput className="date" type="date" />
               </CForm>
             </CCol>
             <CCol sm="6" md="2">
               <CForm>
-                <CFormLabel className='date'l>To</CFormLabel>
-                <CFormInput className='date' type="date" />
+                <CFormLabel className="date" l>
+                  To
+                </CFormLabel>
+                <CFormInput className="date" type="date" />
               </CForm>
             </CCol>
             <CCol sm="6" md="2">
-              <CButton className='font' color="success">
+              <CButton className="font" color="success">
                 Search
               </CButton>
             </CCol>

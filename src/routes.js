@@ -1,9 +1,5 @@
 import { element } from 'prop-types'
 import React from 'react'
-
-// const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'));
-const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
-const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 // ----------------------------------------------------------------//
 
 const Login = React.lazy(() => import('./views/pages/login/Login'))
@@ -98,7 +94,8 @@ const AdminLeads = React.lazy(() => import('./views/Dashboard/Leads/Leads'));
 const AdminDeals = React.lazy(() => import('./views/Dashboard/Deals/Deals'))
 
 const ClientsProfile = React.lazy(() => import('./views/Clients-page/Client-Profile'))
-
+import Role from './views/Settingss/SettingsPage/SettingsPage';
+import Notification from "./views/Settingss/Notificationpage/Notificationpage";
 // Connecting Routes
 
 const routes = [
@@ -199,7 +196,10 @@ const routes = [
   { path: '/company-assets', name: 'Company Assets', element: CompanyAssets },
   { path: '/company-users', name: 'Company Users', element: CompanyUsers },
 
-  { path: '/clients-profile', name: 'Clients-Profile', element: ClientsProfile }
+  { path: '/clients-profile', name: 'Clients-Profile', element: ClientsProfile },
+  { path: '/settings', name: 'Settings' },
+  { path: "/settings/role-list", name: 'Role & Permission', element: Role },
+  {path:'/settings/notification', name:'Notifications', element: Notification}
 
 ]
 
