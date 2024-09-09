@@ -39,7 +39,7 @@ const Payslip = () => {
   ])
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [rowsPerPage] = useState(5)
+  const [rowsPerPage] = useState(4)
 
   const [filterName, setFilterName] = useState('')
   const [filterMonth, setFilterMonth] = useState('')
@@ -145,4 +145,4 @@ const Payslip = () => {
   )
 }
 
-export default Payslip
+export default Payslip;

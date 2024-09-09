@@ -77,7 +77,6 @@ const _nav = [
     component: CNavTitle,
     name: 'Employees',
   },
-  // todo: Employee
   {
     component: CNavGroup,
     name: 'Employee',
@@ -104,11 +103,6 @@ const _nav = [
         name: 'Leave Employee',
         to: '/employees/employee-leave',
       },
-      // {
-      //   component: CNavItem,
-      //   name: 'Leave Settings',
-      //   to: '/employees/leave-Settings',
-      // },
       {
         component: CNavItem,
         name: 'Attendence Admin',
@@ -199,7 +193,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Daily Report',
-        to: '/    ',
+        to: '/report/daily-report',
       },
       {
         component: CNavItem,
@@ -207,6 +201,12 @@ const _nav = [
         to: '/report/projects-report',
       },
     ],
+  },
+  {
+    component: CNavItem,
+    name: 'Leave Policy',
+    to: '/leave-policy',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
@@ -226,6 +226,7 @@ const _nav = [
       },
     ],
   },
+  
 ]
 
 export default _nav
