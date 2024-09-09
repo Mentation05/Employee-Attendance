@@ -1,0 +1,100 @@
+.daily-report {
+    padding: 20px;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  
+      div {
+        font-size: 18px;
+      }
+    }
+  
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+  
+      input, select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #218838;
+        }
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  
+      th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #f8f9fa;
+      }
+  
+      .status {
+        &.week-off {
+          color: blue;
+        }
+  
+        &.absent {
+          color: red;
+        }
+      }
+    }
+  
+    .pagination {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+  
+      li {
+        margin: 0 5px;
+  
+        a {
+          padding: 8px 12px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          cursor: pointer;
+          color: #007bff;
+          text-decoration: none;
+  
+          &:hover {
+            background-color: #007bff;
+            color: white;
+          }
+        }
+  
+        &.active a {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  }
+  

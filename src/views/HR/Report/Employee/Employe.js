@@ -31,7 +31,7 @@ const EmployeeReport = () => {
         <div className="employee-report">
             <h2>Employee Report</h2>
             <div className="search-bar">
-                <input type="text" placeholder="Employee" />
+                <input type="text" placeholder="Employee" /> 
                 <select>
                     <option>Select Department</option>
                     <option>Design</option>

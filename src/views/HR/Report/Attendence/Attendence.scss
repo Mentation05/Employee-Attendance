@@ -1,0 +1,81 @@
+.attendance-report {
+    padding: 20px;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      h1 {
+        font-size: 24px;
+        color: #333;
+      }
+  
+      .filters {
+        display: flex;
+        gap: 10px;
+  
+        input, .search-btn {
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+  
+        .search-btn {
+          background-color: #28a745;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    .table-wrapper {
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+  
+        th, td {
+          padding: 12px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+  
+        th {
+          background-color: #f8f9fa;
+        }
+  
+        .week-off {
+          color: red;
+        }
+      }
+    }
+  
+    /* Pagination Styles */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  
+      button {
+        padding: 10px 15px;
+        margin: 0 5px;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        cursor: pointer;
+  
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+  
+        &.active {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  }
+  

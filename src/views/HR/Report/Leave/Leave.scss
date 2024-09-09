@@ -1,0 +1,91 @@
+.leave-report {
+    padding: 20px;
+    background-color: #f9f9f9;
+  
+    .leave-report-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      h2 {
+        color: #4b35f3;
+      }
+  
+      .search-bar {
+        input {
+          padding: 10px;
+          width: 300px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+        }
+      }
+    }
+  
+    .leave-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+  
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #5535f3;
+        color: white;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+  
+      .leave-type {
+        padding: 5px 10px;
+        border-radius: 4px;
+        &.sick-leave {
+          background-color: #d1e7dd;
+          color: #0f5132;
+        }
+        &.emergency-leave {
+          background-color: #f8d7da;
+          color: #842029;
+        }
+        &.parenting-leave {
+          background-color: #fff3cd;
+          color: #664d03;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      background-color: #f37335;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    span {
+      margin: 0 10px;
+      font-size: 16px;
+    }
+  }
+  
+  
