@@ -61,42 +61,42 @@ const routes = [
 
   //EMPLOYEES
   { path: '/employees', name: 'Employees' },
-  { path: '/employees/all-employees', name: 'All Employees', element: <AuthGuard element={<Employee />} allowedRoles={['employee']} />  },
-  { path: '/employees/leave-admin', name: 'Leave', element: Leave },
-  { path: '/employees/holidays', name: 'Holidays', element: Holidays },
-  { path: '/employees/employee-leave', name: 'EmployeeLeave', element: EmployeeLeave },
-  { path: '/employees/leave-Settings', name: 'LeaveSettings', element: LeaveSettings },
-  { path: '/employees/attendence-Admin', name: 'AttendenceAdmin', element: AttendenceAdmin },
-  { path: '/employees/attendence-Employee', name: 'AttendenceEmployee', element: AttendenceEmployee,},
-  { path: '/employees/departments', name: 'Departments', element: Departments },
-  { path: '/employees/designations', name: 'Designations', element: Designations },
-  { path: '/employees/time-sheet', name: 'Time-Sheet', element: TimeSheet },
-  { path: '/employees/shift-schedules', name: 'Shift-Schedules', element: ShiftSchedules },
-  { path: '/employees/overtime', name: 'Overtime', element: OverTime },
+  { path: '/employees/all-employees', name: 'All Employees', element: <AuthGuard element={<Employee />} allowedRoles={['employee']} />},
+  { path: '/employees/leave-admin', name: 'Leave', element: <AuthGuard element={<Leave />} allowedRoles={['employee']} /> },
+  { path: '/employees/holidays', name: 'Holidays', element: <AuthGuard element={<Holidays />} allowedRoles={['employee']} /> },
+  { path: '/employees/employee-leave', name: 'EmployeeLeave', element: <AuthGuard element={<EmployeeLeave />} allowedRoles={['employee']} /> },
+  { path: '/employees/leave-Settings', name: 'LeaveSettings', element: <AuthGuard element={<LeaveSettings />} allowedRoles={['employee']} /> },
+  { path: '/employees/attendence-Admin', name: 'AttendenceAdmin', element: <AuthGuard element={<AttendenceAdmin />} allowedRoles={['employee']} /> },
+  { path: '/employees/attendence-Employee', name: 'AttendenceEmployee', element: <AuthGuard element={<AttendenceEmployee />} allowedRoles={['employee']} />},
+  { path: '/employees/departments', name: 'Departments', element: <AuthGuard element={<Departments />} allowedRoles={['employee']} /> },
+  { path: '/employees/designations', name: 'Designations', element: <AuthGuard element={<Designations />} allowedRoles={['employee']} /> },
+  { path: '/employees/time-sheet', name: 'Time-Sheet', element: <AuthGuard element={<TimeSheet />} allowedRoles={['employee']} /> },
+  { path: '/employees/shift-schedules', name: 'Shift-Schedules', element: <AuthGuard element={<ShiftSchedules />} allowedRoles={['employee']} /> },
+  { path: '/employees/overtime', name: 'Overtime', element: <AuthGuard element={<OverTime />} allowedRoles={['employee']} /> },
 
   //CLIENTS
   { path: '/clients', name: 'Clients', element: Clients },
-  { path: '/clients-profile', name: 'Clients-Profile', element: ClientsProfile },
+  { path: '/clients-profile', name: 'Clients-Profile', element: <AuthGuard element={<ClientsProfile />} allowedRoles={['employee', 'admin']} /> },
 
   //REPORTS
   { path: '/report', name: 'Reports' },
-  { path: '/report/projects-report', name: 'Project Reports', element: ProjectReport },
-  { path: '/report/task-report', name: 'Task Reports', element: TaskReport },
-  { path: '/report/user-report', name: 'User Reports', element: UserReport },
-  { path: '/report/employee-report', name: 'Employee Reports', element: EmployeeReport },
-  { path: '/report/payslip-report', name: 'Payslip Reports', element: PayslipReport },
-  { path: '/report/attendence-report', name: 'Attendence Reports', element: AttendenceReport },
-  { path: '/report/leave-report', name: 'Leave Reports', element: LeaveReport },
-  { path: '/report/daily-report', name: 'Daily Reports', element: DailyReport },
+  { path: '/report/projects-report', name: 'Project Reports', element: <AuthGuard element={<ProjectReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/task-report', name: 'Task Reports', element: <AuthGuard element={<TaskReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/user-report', name: 'User Reports', element: <AuthGuard element={<UserReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/employee-report', name: 'Employee Reports', element: <AuthGuard element={<EmployeeReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/payslip-report', name: 'Payslip Reports', element: <AuthGuard element={<PayslipReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/attendence-report', name: 'Attendence Reports', element: <AuthGuard element={<AttendenceReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/leave-report', name: 'Leave Reports', element: <AuthGuard element={<LeaveReport />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/report/daily-report', name: 'Daily Reports', element: <AuthGuard element={<DailyReport />} allowedRoles={['employee', 'admin']} /> },
 
   //SETTINGS
   { path: '/settings', name: 'Settings' },
-  { path: '/settings/role-list', name: 'Role & Permission', element: Role },
-  { path: '/settings/notification', name: 'Notifications', element: Notification },
+  { path: '/settings/role-list', name: 'Role & Permission', element: <AuthGuard element={<Role />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/settings/notification', name: 'Notifications', element: <AuthGuard element={<Notification />} allowedRoles={['employee', 'admin']} /> },
 
   //HR
-  { path: '/leave-policy', name: 'LeavePolicy', element: LeavePolicy },
-  { path: '/branches', name: 'Branches', element: Branches },
+  { path: '/leave-policy', name: 'LeavePolicy', element: <AuthGuard element={<LeavePolicy />} allowedRoles={['employee', 'admin']} /> },
+  { path: '/branches', name: 'Branches', element: <AuthGuard element={<Branches />} allowedRoles={['employee', 'admin']} /> },
   
 
 ]
