@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import "./Departments.scss";
+import React, { useState } from 'react'
+import './Departments.scss'
 import {
   CButton,
   CModal,
@@ -17,13 +17,13 @@ import {
   CTableHeaderCell,
   CTableRow,
   CTableDataCell,
-} from '@coreui/react';
+} from '@coreui/react'
 
 const DepartmentManagement = () => {
-  const [editModalVisible, setEditModalVisible] = useState(false);
-  const [deleteModalVisible, setDeleteModalVisible] = useState(false);
-  const [departmentName, setDepartmentName] = useState('');
-  const [selectedDepartmentId, setSelectedDepartmentId] = useState(null);
+  const [editModalVisible, setEditModalVisible] = useState(false)
+  const [deleteModalVisible, setDeleteModalVisible] = useState(false)
+  const [departmentName, setDepartmentName] = useState('')
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState(null)
 
   const departments = [
     { id: 1, name: 'Web Development' },
@@ -32,32 +32,32 @@ const DepartmentManagement = () => {
     { id: 4, name: 'Accounts Management' },
     { id: 5, name: 'Support Management' },
     { id: 6, name: 'Marketing' },
-  ];
+  ]
 
   const handleEdit = (id) => {
-    const department = departments.find((dept) => dept.id === id);
-    setSelectedDepartmentId(id);
-    setDepartmentName(department.name);
-    setEditModalVisible(true);
-  };
+    const department = departments.find((dept) => dept.id === id)
+    setSelectedDepartmentId(id)
+    setDepartmentName(department.name)
+    setEditModalVisible(true)
+  }
 
   const handleEditSave = () => {
     // Save changes logic here
-    setEditModalVisible(false);
-  };
+    setEditModalVisible(false)
+  }
 
   const handleDelete = (id) => {
-    setSelectedDepartmentId(id);
-    setDeleteModalVisible(true);
-  };
+    setSelectedDepartmentId(id)
+    setDeleteModalVisible(true)
+  }
 
   const handleDeleteConfirm = () => {
     // Delete department logic here
-    setDeleteModalVisible(false);
-  };
+    setDeleteModalVisible(false)
+  }
 
   return (
-    <div>
+    <div className="departments">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>Department Management</h2>
         <CButton className="add-btn" onClick={() => setEditModalVisible(true)}>
@@ -66,22 +66,22 @@ const DepartmentManagement = () => {
       </div>
       <CTable hover responsive className="table table-striped">
         <CTableHead>
-          <CTableRow className='tablerow'>
-            <CTableHeaderCell>#</CTableHeaderCell>
+          <CTableRow className="tablerow">
+            <CTableHeaderCell>Serial No.</CTableHeaderCell>
             <CTableHeaderCell>Department Name</CTableHeaderCell>
             <CTableHeaderCell>Action</CTableHeaderCell>
           </CTableRow>
         </CTableHead>
         <CTableBody>
           {departments.map((dept, index) => (
-            <CTableRow key={dept.id} className='tabledata'>
+            <CTableRow key={dept.id} className="tabledata">
               <CTableDataCell>{index + 1}</CTableDataCell>
               <CTableDataCell>{dept.name}</CTableDataCell>
               <CTableDataCell>
-                <CButton className='Action-edit' size="sm" onClick={() => handleEdit(dept.id)}>
+                <CButton className="Action-edit" size="sm" onClick={() => handleEdit(dept.id)}>
                   Edit
                 </CButton>{' '}
-                <CButton className='Action-delete' size="sm" onClick={() => handleDelete(dept.id)}>
+                <CButton className="Action-delete" size="sm" onClick={() => handleDelete(dept.id)}>
                   Delete
                 </CButton>
               </CTableDataCell>
@@ -96,9 +96,9 @@ const DepartmentManagement = () => {
         visible={editModalVisible}
         onClose={() => setEditModalVisible(false)}
         aria-labelledby="EditDepartmentModalTitle"
-        className='editmodel'
+        className="editmodel"
       >
-        <CModalHeader className='title'>
+        <CModalHeader className="title">
           <CModalTitle id="EditDepartmentModalTitle">
             {selectedDepartmentId ? 'Edit Department' : 'Add Department'}
           </CModalTitle>
@@ -112,7 +112,7 @@ const DepartmentManagement = () => {
                   placeholder="Department Name"
                   value={departmentName}
                   onChange={(e) => setDepartmentName(e.target.value)}
-                  className='input'
+                  className="input"
                 />
               </CCol>
             </CRow>
@@ -134,9 +134,9 @@ const DepartmentManagement = () => {
         visible={deleteModalVisible}
         onClose={() => setDeleteModalVisible(false)}
         aria-labelledby="DeleteDepartmentModalTitle"
-        className='deleteModal'
+        className="deleteModal"
       >
-        <CModalHeader className='title'>
+        <CModalHeader className="title">
           <CModalTitle id="DeleteDepartmentModalTitle">Confirm Deletion</CModalTitle>
         </CModalHeader>
         <CModalBody>
@@ -152,7 +152,7 @@ const DepartmentManagement = () => {
         </CModalFooter>
       </CModal>
     </div>
-  );
-};
+  )
+}
 
-export default DepartmentManagement;
+export default DepartmentManagement

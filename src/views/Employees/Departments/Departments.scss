@@ -1,190 +1,188 @@
 @import '../../../scss/style.scss';
 
-.department-table-container {
-  .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
+.departments {
+  .department-table-container {
+    .table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
 
-    th,
-    td {
-      padding: 0.75rem;
-      vertical-align: top;
-      border-top: 1px solid #dee2e6;
+      th,
+      td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+      }
+
+      thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
     }
 
-    thead th {
-      vertical-align: bottom;
-      border-bottom: 2px solid #dee2e6;
+    .d-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
     }
-  }
 
-  .d-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
+    .mb-3 {
+      margin-bottom: 1rem;
+    }
 
-  .mb-3 {
-    margin-bottom: 1rem;
-  }
-
-  .me-2 {
-    margin-right: 0.5rem;
-  }
-}
-
-.tabledata,
-.tablerow {
-  font-family: $mont !important;
-}
-
-.Action-edit {
-  font-family: $mont !important;
-  border: 1px solid greenyellow;
-  color: #fff;
-  background-color: transparent !important;
-
-  &:hover {
-    border: 1px solid #eee;
-  }
-}
-.Action-delete {
-  font-family: $mont !important;
-  border: 1px solid red;
-  color: #fff;
-  background-color: transparent !important;
-
-  &:hover {
-    border: 1px solid #eee;
-  }
-}
-
-.modal-content {
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.deleteModal {
-  background-color: transparent !important;
-
-  .modal-header {
-    font-family: $unbounded;
-    font-size: 1.5rem;
-  }
-
-  .text {
-    font-family: $mont;
-  }
-
-  .title {
-    font-family: $unbounded;
-  }
-
-  .cancle {
-    border: 1px solid #000;
-    background-color: yellowgreen;
-    color: #000;
-    font-family: $mont;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 0px;
-    outline: none;
-    &:hover {
-      background-color: rgba(172, 255, 47, 0.499);
+    .me-2 {
+      margin-right: 0.5rem;
     }
   }
 
-  .delete {
-    border: 1px solid #000;
-    background-color: greenyellow;
-    color: #000;
-    font-family: $mont;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 0px;
-    outline: none;
-    &:hover {
-      background-color: rgba(172, 255, 47, 0.47);
-    }
+  .tabledata,
+  .tablerow {
+    font-family: $mont !important;
   }
-}
 
-.editmodel {
-  background-color: transparent !important;
-
-  .input {
+  .Action-edit {
+    font-family: $mont !important;
+    border: 1px solid greenyellow;
+    color: #fff;
     background-color: transparent !important;
-    font-family: $mont;
-    font-size: 15px;
-    font-weight: 500;
-    border: 1px solid #000;
-    outline: none !important;
-  }
 
-  .modal-header {
-    font-family: $unbounded;
-    font-size: 1.5rem;
-  }
-
-  .text {
-    font-family: $mont;
-  }
-
-  .title {
-    font-family: $unbounded;
-  }
-
-  .cancle {
-    border: 1px solid #000;
-    background-color: greenyellow;
-    color: #000;
-    font-family: $mont;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 0px;
-    outline: none;
     &:hover {
-      background-color: rgba(172, 255, 47, 0.499);
+      border: 1px solid #eee;
+    }
+  }
+  .Action-delete {
+    font-family: $mont !important;
+    border: 1px solid red;
+    color: #fff;
+    background-color: transparent !important;
+
+    &:hover {
+      border: 1px solid #eee;
     }
   }
 
-  .delete {
-    border: 1px solid #000;
-    background-color: greenyellow;
-    color: #000;
-    font-family: $mont;
-    font-size: 15px;
+  .modal-content {
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .deleteModal {
+    background-color: transparent !important;
+
+    .modal-header {
+      font-family: $unbounded;
+      font-size: 1.5rem;
+    }
+
+    .text {
+      font-family: $mont;
+    }
+
+    .title {
+      font-family: $unbounded;
+    }
+
+    .cancle {
+      border: 1px solid #000;
+      background-color: yellowgreen;
+      color: #000;
+      font-family: $mont;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 0px;
+      outline: none;
+      &:hover {
+        background-color: rgba(172, 255, 47, 0.499);
+      }
+    }
+
+    .delete {
+      border: 1px solid #000;
+      background-color: greenyellow;
+      color: #000;
+      font-family: $mont;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 0px;
+      outline: none;
+      &:hover {
+        background-color: rgba(172, 255, 47, 0.47);
+      }
+    }
+  }
+
+  .editmodel {
+    background-color: transparent !important;
+
+    .input {
+      background-color: transparent !important;
+      font-family: $mont;
+      font-size: 15px;
+      font-weight: 500;
+      border: 1px solid #000;
+      outline: none !important;
+    }
+
+    .modal-header {
+      font-family: $unbounded;
+      font-size: 1.5rem;
+    }
+
+    .text {
+      font-family: $mont;
+    }
+
+    .title {
+      font-family: $unbounded;
+    }
+
+    .cancle {
+      border: 1px solid #000;
+      background-color: greenyellow;
+      color: #000;
+      font-family: $mont;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 0px;
+      outline: none;
+      &:hover {
+        background-color: rgba(172, 255, 47, 0.499);
+      }
+    }
+
+    .delete {
+      border: 1px solid #000;
+      background-color: greenyellow !important;
+      color: #000 !important;
+      font-family: $mont;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 0px;
+      outline: none;
+      &:hover {
+        background-color: rgba(172, 255, 47, 0.47);
+      }
+    }
+  }
+
+  h2 {
+    font-family: $unbounded;
+    font-size: 1rem;
     font-weight: 500;
-    border-radius: 0px;
-    outline: none;
+  }
+
+  .add-btn {
+    border: 1px solid #000;
+    background-color: greenyellow !important;
+    cursor: pointer;
+    font-family: $mont;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+
     &:hover {
-      background-color: rgba(172, 255, 47, 0.47);
+      background-color: transparent !important;
     }
   }
 }
-
-
-
-h2{
-  font-family: $unbounded;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.add-btn{
-  border: 1px solid #000;
-  background-color: greenyellow !important;
-  cursor: pointer;
-  font-family: $mont;
-  font-weight: 500;
-  font-size: 14px;
-  color: #000;
-
-  &:hover{
-    background-color: transparent !important;;
-  }
-
-}
-

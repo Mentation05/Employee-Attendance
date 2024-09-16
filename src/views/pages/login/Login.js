@@ -22,9 +22,9 @@ const Login = () => {
               <h3 className="card-title mb-4">Login</h3>
               <form>
                 <div className="mb-3 input">
-                  <label htmlFor="email" className="form-label">
+                  {/* <label htmlFor="email" className="form-label">
                     Email address
-                  </label>
+                  </label> */}
                   <input
                     type="email"
                     className="form-control"
@@ -33,9 +33,9 @@ const Login = () => {
                   />
                 </div>
                 <div className="mb-3 input">
-                  <label htmlFor="password" className="form-label">
+                  {/* <label htmlFor="password" className="form-label">
                     Password
-                  </label>
+                  </label> */}
                   <input
                     type="password"
                     className="form-control"

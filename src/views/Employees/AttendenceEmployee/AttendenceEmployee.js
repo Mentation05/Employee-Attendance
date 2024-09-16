@@ -45,10 +45,10 @@ export default function AttendenceEmployee() {
   return (
     <>
       <div className="employee-attendence">
-        <CRow>
+        <CRow className="align-items-stretch">
           <CCol md={4}>
-            <CCard className="punch-status">
-              <CCardBody className="card-body">
+            <CCard className="punch-status custom-card-height">
+              <CCardBody>
                 <h5 className="card-title">
                   Timesheet <small className="text-muted">11 Mar 2019</small>
                 </h5>
@@ -85,7 +85,7 @@ export default function AttendenceEmployee() {
           </CCol>
 
           <CCol md={4}>
-            <CCard className="att-statistics">
+            <CCard className="att-statistics custom-card-height">
               <CCardBody>
                 <h5 className="card-title">Statistics</h5>
                 <div className="stats-list">
@@ -97,48 +97,40 @@ export default function AttendenceEmployee() {
                       </strong>
                     </p>
                     <CProgress className="lines">
-                      <CProgressBar className="line" color="primary" value={31} />
+                      <CProgressBar color="primary" value={31} />
                     </CProgress>
                   </div>
                   <div className="stats-info">
                     <p>
-                      This Week
+                      Today
                       <strong>
-                        28 <small>/ 40 hrs</small>
+                        3.45 <small>/ 8 hrs</small>
                       </strong>
                     </p>
                     <CProgress className="lines">
-                      <CProgressBar className="line" color="warning" value={41} />
+                      <CProgressBar color="primary" value={31} />
                     </CProgress>
                   </div>
                   <div className="stats-info">
                     <p>
-                      This Month
+                      Today
                       <strong>
-                        90 <small>/ 160 hrs</small>
+                        3.45 <small>/ 8 hrs</small>
                       </strong>
                     </p>
                     <CProgress className="lines">
-                      <CProgressBar className="line" color="success" value={62} />
+                      <CProgressBar color="primary" value={31} />
                     </CProgress>
                   </div>
                   <div className="stats-info">
                     <p>
-                      Remaining
+                      Today
                       <strong>
-                        90 <small>/ 160 hrs</small>
+                        3.45 <small>/ 8 hrs</small>
                       </strong>
                     </p>
                     <CProgress className="lines">
-                      <CProgressBar className="line" color="danger" value={62} />
-                    </CProgress>
-                  </div>
-                  <div className="stats-info">
-                    <p>
-                      Overtime <strong>4</strong>
-                    </p>
-                    <CProgress className="lines">
-                      <CProgressBar className="line" color="info" value={22} />
+                      <CProgressBar color="primary" value={31} />
                     </CProgress>
                   </div>
                 </div>
@@ -147,7 +139,7 @@ export default function AttendenceEmployee() {
           </CCol>
 
           <CCol md={4}>
-            <CCard className="recent-activity">
+            <CCard className="recent-activity custom-card-height">
               <CCardBody>
                 <h5 className="card-title">Today Activity</h5>
                 <ul className="res-activity-list">
@@ -158,33 +150,15 @@ export default function AttendenceEmployee() {
                     </p>
                   </li>
                   <li>
-                    <p className="mb-0">Punch Out at</p>
+                    <p className="mb-0">Punch In at</p>
                     <p className="res-activity-time">
-                      <CIcon icon={cilClock} /> 11.00 AM
+                      <CIcon icon={cilClock} /> 10.00 AM
                     </p>
                   </li>
                   <li>
                     <p className="mb-0">Punch In at</p>
                     <p className="res-activity-time">
-                      <CIcon icon={cilClock} /> 11.15 AM
-                    </p>
-                  </li>
-                  <li>
-                    <p className="mb-0">Punch Out at</p>
-                    <p className="res-activity-time">
-                      <CIcon icon={cilClock} /> 1.30 PM
-                    </p>
-                  </li>
-                  <li>
-                    <p className="mb-0">Punch In at</p>
-                    <p className="res-activity-time">
-                      <CIcon icon={cilClock} /> 2.00 PM
-                    </p>
-                  </li>
-                  <li>
-                    <p className="mb-0">Punch In at</p>
-                    <p className="res-activity-time">
-                      <CIcon icon={cilClock} /> 2.00 PM
+                      <CIcon icon={cilClock} /> 10.00 AM
                     </p>
                   </li>
                 </ul>
@@ -196,19 +170,19 @@ export default function AttendenceEmployee() {
         <CRow className="filter-row">
           <CCol sm={3}>
             <div className="input-block mb-3 form-focus">
-              <div className="cal-icon">
+              <div className="cal-icon ">
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                   dateFormat="MM/dd/yyyy"
-                  className="form-control"
+                  className="form-control input"
                 />
               </div>
               <label className="focus-label">Date</label>
             </div>
           </CCol>
           <CCol sm={3}>
-            <div className="input-block mb-3 form-focus select-focus">
+            <div className="input-block mb-3 form-focus select-focus input">
               <CFormSelect className="floating">
                 <option>-</option>
                 <option>Jan</option>
@@ -228,7 +202,7 @@ export default function AttendenceEmployee() {
             </div>
           </CCol>
           <CCol sm={3}>
-            <div className="input-block mb-3 form-focus select-focus">
+            <div className="input-block mb-3 form-focus select-focus input">
               <CFormSelect className="floating">
                 <option>-</option>
                 <option>2019</option>
@@ -243,7 +217,7 @@ export default function AttendenceEmployee() {
           <CCol sm={3}>
             <div className="input-block mb-3 form-focus select-focus">
               <CButton
-                className="form-control btn-select"
+                className="form-control search mt-0"
                 onClick={() => {
                   // Handle button click here
                 }}
@@ -258,7 +232,7 @@ export default function AttendenceEmployee() {
           <CCol>
             <CCard>
               <CCardBody>
-                <CTable className='table-container' hover>
+                <CTable className="table-container" hover>
                   <CTableHead>
                     <CTableRow>
                       <CTableHeaderCell>#</CTableHeaderCell>

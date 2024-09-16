@@ -1,67 +1,68 @@
-import { element } from 'prop-types'
-import React from 'react'
+import { element } from 'prop-types';
+import React from 'react';
 // ----------------------------------------------------------------//
-import Employee from './views/Employees/Employee/Emloyee'
-import Leave from './views/Employees/Leave/Leave'
-import Holidays from './views/Employees/Holidays/Holidays'
-import EmployeeLeave from './views/Employees/EmployeeLeave/EmployeeLeave'
-import LeaveSettings from './views/Employees/LeaveSettings/LeaveSettings'
-import AttendenceAdmin from './views/Employees/AttendenceAdmin/AttendenceAdmin'
-import AttendenceEmployee from './views/Employees/AttendenceEmployee/AttendenceEmployee'
-import Departments from './views/Employees/Departments/Departments'
-import Designations from './views/Employees/Designations/Designations'
-import TimeSheet from './views/Employees/TimeSheet/TimeSheet'
-import ShiftSchedules from './views/Employees/ShiftSchedules/ShiftSchedules'
-import OverTime from './views/Employees/OverTime/OverTime'
-import Clients from './views/Clients-page/Clients'
-import Contacts from './views/CRM/Contact/Contact'
-import Companies from './views/CRM/Companies/Companies'
-import Deals from './views/CRM/Deals/Deal'
-import Activity from './views/CRM/Activity/Activity'
-import Lead from './views/CRM/Lead/Lead'
+import Employee from './views/Employees/Employee/Emloyee';
+import Leave from './views/Employees/Leave/Leave';
+import Holidays from './views/Employees/Holidays/Holidays';
+import EmployeeLeave from './views/Employees/EmployeeLeave/EmployeeLeave';
+import LeaveSettings from './views/Employees/LeaveSettings/LeaveSettings';
+import AttendenceAdmin from './views/Employees/AttendenceAdmin/AttendenceAdmin';
+import AttendenceEmployee from './views/Employees/AttendenceEmployee/AttendenceEmployee';
+import Departments from './views/Employees/Departments/Departments';
+import Designations from './views/Employees/Designations/Designations';
+import TimeSheet from './views/Employees/TimeSheet/TimeSheet';
+import ShiftSchedules from './views/Employees/ShiftSchedules/ShiftSchedules';
+import OverTime from './views/Employees/OverTime/OverTime';
+import Clients from './views/Clients-page/Clients';
+import Contacts from './views/CRM/Contact/Contact';
+import Companies from './views/CRM/Companies/Companies';
+import Deals from './views/CRM/Deals/Deal';
+import Activity from './views/CRM/Activity/Activity';
+import Lead from './views/CRM/Lead/Lead';
 
-import ProjectReport from './views/HR/Report/ProjectReport/ProjectReport'
-import TaskReport from './views/HR/Report/Task/Task'
-import UserReport from './views/HR/Report/User/User'
-import EmployeeReport from './views/HR/Report/Employee/Employe'
-import PayslipReport from './views/HR/Report/Payslip/Payslip'
-import PerformanceIndicator from './views/Performance/Performance/PerformanceIndicator/PerformanceIndicator'
-import PerformanceReviews from './views/Performance/Performance/PerformanceReviews/PerformanceReviews'
-import PerformanceAppraisal from './views/Performance/Performance/PerformanceAppraisal/PerformanceAppraisal'
+import ProjectReport from './views/HR/Report/ProjectReport/ProjectReport';
+import TaskReport from './views/HR/Report/Task/Task';
+import UserReport from './views/HR/Report/User/User';
+import EmployeeReport from './views/HR/Report/Employee/Employe';
+import PayslipReport from './views/HR/Report/Payslip/Payslip';
+import PerformanceIndicator from './views/Performance/Performance/PerformanceIndicator/PerformanceIndicator';
+import PerformanceReviews from './views/Performance/Performance/PerformanceReviews/PerformanceReviews';
+import PerformanceAppraisal from './views/Performance/Performance/PerformanceAppraisal/PerformanceAppraisal';
 
-import GoalList from './views/Performance/Goal/GoalList/GoalList'
-import GoalType from './views/Performance/Goal/GoalType/GoalType'
-import TrainingList from './views/Performance/Traning/TranningList/TranningList'
-import Trainers from './views/Performance/Traning/Trainers/Trainers'
-import TrainingType from './views/Performance/Traning/TraningType/TraningType'
-import Promotions from './views/Performance/Promotions/Promotions'
-import Resigination from './views/Performance/Resigination/Resigination'
-import Terminatation from './views/Performance/Terminatation/Terminatation'
-import CompanyAssets from './views/CompanyAssets/CompanyAssets'
-import CompanyUsers from './views/CompanyUsers/CompanyUsers'
-import ChatApp from './views/Application/Chat/Chat'
-import CallApp from './views/Application/Call/Call'
-import EmailApp from './views/Application/Email/Email'
+import GoalList from './views/Performance/Goal/GoalList/GoalList';
+import GoalType from './views/Performance/Goal/GoalType/GoalType';
+import TrainingList from './views/Performance/Traning/TranningList/TranningList';
+import Trainers from './views/Performance/Traning/Trainers/Trainers';
+import TrainingType from './views/Performance/Traning/TraningType/TraningType';
+import Promotions from './views/Performance/Promotions/Promotions';
+import Resigination from './views/Performance/Resigination/Resigination';
+import Terminatation from './views/Performance/Terminatation/Terminatation';
+import CompanyAssets from './views/CompanyAssets/CompanyAssets';
+import CompanyUsers from './views/CompanyUsers/CompanyUsers';
+import ChatApp from './views/Application/Chat/Chat';
+import CallApp from './views/Application/Call/Call';
+import EmailApp from './views/Application/Email/Email';
 import calendar from './views/Application/Calendar/Calendar';
-import AdminDashboard from './views/Dashboard/AdminDashboard/AdminDashboard'
-import EmployeeDashboard from './views/Dashboard/EmployeeDashboard/EmployeeDashboard'
-import AdminLeads from './views/CRM/Lead/Lead'
-import AdminDeals from './views/CRM/Deals/Deal'
-import ClientsProfile from './views/Clients-page/Client-Profile'
-import Role from './views/Settingss/SettingsPage/SettingsPage'
-import Notification from './views/Settingss/Notificationpage/Notificationpage'
+import AdminDashboard from './views/Dashboard/AdminDashboard/AdminDashboard';
+import EmployeeDashboard from './views/Dashboard/EmployeeDashboard/EmployeeDashboard';
+import AdminLeads from './views/CRM/Lead/Lead';
+import AdminDeals from './views/CRM/Deals/Deal';
+import ClientsProfile from './views/Clients-page/Client-Profile';
+import Role from './views/Settingss/SettingsPage/SettingsPage';
+import Notification from './views/Settingss/Notificationpage/Notificationpage';
 import AttendenceReport from "./views/HR/Report/Attendence/Attendence";
 import LeaveReport from "./views/HR/Report/Leave/Leave";
 import DailyReport from "./views/HR/Report/Daily/Daily";
 
-import LeavePolicy from './views/HR/LeavePolicy/Leave-Policy'
+import LeavePolicy from './views/HR/LeavePolicy/Leave-Policy';
+import DefaultLayout from './layout/DefaultLayout';
 
 
 
 // Connecting Routes
 
 const routes = [
-  // { path: '/login', name: 'Login',  element: Login },
+  // { path: '/', name: 'Home', element: DefaultLayout },
 
   { path: '/dashboard', name: 'Dashboard' },
   { path: '/dashboard/admin', name: 'Admin Dashboard', element: AdminDashboard },
@@ -108,7 +109,7 @@ const routes = [
   { path: '/report/leave-report', name: 'Leave Reports', element: LeaveReport },
   { path: '/report/daily-report', name: 'Daily Reports', element: DailyReport },
   { path: '/performance', name: 'Performance' },
-  { path: '/performance/performance-indicator', name: 'Performance Indicators', element: PerformanceIndicator},
+  { path: '/performance/performance-indicator', name: 'Performance Indicators', element: PerformanceIndicator },
   {
     path: '/performance/performance-review',
     name: 'Performance Review',
@@ -139,6 +140,6 @@ const routes = [
 
   { path: '/leave-policy', name: 'LeavePolicy', element: LeavePolicy },
 
-]
+];
 
-export default routes
+export default routes;
