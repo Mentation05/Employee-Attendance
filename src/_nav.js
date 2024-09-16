@@ -33,16 +33,7 @@ const _nav = [
         name: 'Employee',
         to: '/dashboard/employee',
       },
-      {
-        component: CNavItem,
-        name: 'Deals',
-        to: '/dashboard/deals',
-      },
-      {
-        component: CNavItem,
-        name: 'Leads',
-        to: '/dashboard/leads',
-      },
+
     ],
   },
   {
@@ -206,6 +197,12 @@ const _nav = [
     component: CNavItem,
     name: 'Leave Policy',
     to: '/leave-policy',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Branches',
+    to: '/branches',
     icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {

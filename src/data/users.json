@@ -1,0 +1,15 @@
+[
+    {
+      "username": "user1@gmail.com",
+      "password": "password123",
+      "role": "employee",
+      "token": "some-token-for-user1"
+    },
+    {
+      "username": "admin1@gmail.com",
+      "password": "adminpassword123",
+      "role": "admin",
+      "token": "some-token-for-admin1"
+    }
+  ]
+  
