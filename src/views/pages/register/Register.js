@@ -26,9 +26,9 @@ const Register = () => {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="name" class="form-label">
+                      {/* <label htmlFor="name" class="form-label">
                         Name
-                      </label>
+                      </label> */}
                       <input
                         type="text"
                         class="form-control"
@@ -39,9 +39,9 @@ const Register = () => {
                   </div>
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="email" class="form-label">
+                      {/* <label htmlFor="email" class="form-label">
                         Email address
-                      </label>
+                      </label> */}
                       <input
                         type="email"
                         class="form-control"
@@ -54,9 +54,9 @@ const Register = () => {
                 <div class="row mt-3">
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="password" class="form-label">
+                      {/* <label htmlFor="password" class="form-label">
                         Password
-                      </label>
+                      </label> */}
                       <input
                         type="password"
                         class="form-control"
@@ -67,9 +67,9 @@ const Register = () => {
                   </div>
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="confirm-password" class="form-label">
+                      {/* <label htmlFor="confirm-password" class="form-label">
                         Confirm Password
-                      </label>
+                      </label> */}
                       <input
                         type="password"
                         class="form-control"
@@ -82,9 +82,9 @@ const Register = () => {
                 <div class="row mt-3">
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="phone" class="form-label">
+                      {/* <label htmlFor="phone" class="form-label">
                         Phone Number
-                      </label>
+                      </label> */}
                       <input
                         type="tel"
                         class="form-control"
@@ -95,9 +95,9 @@ const Register = () => {
                   </div>
                   <div class="col-md-6">
                     <div class="form-row input">
-                      <label htmlFor="role" class="form-label">
+                      {/* <label htmlFor="role" class="form-label">
                         Role
-                      </label>
+                      </label> */}
                       <select class="form-select" id="role">
                         <option selected disabled>
                           Select your role
