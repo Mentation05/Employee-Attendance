@@ -75,7 +75,7 @@ const routes = [
   { path: '/employees/overtime', name: 'Overtime', element: <AuthGuard element={<OverTime />} allowedRoles={['employee']} /> },
 
   //CLIENTS
-  { path: '/clients', name: 'Clients', element: Clients },
+  { path: '/clients', name: 'Clients', element: <AuthGuard element={<Clients />} allowedRoles={['employee', 'admin']} /> },
   { path: '/clients-profile', name: 'Clients-Profile', element: <AuthGuard element={<ClientsProfile />} allowedRoles={['employee', 'admin']} /> },
 
   //REPORTS
