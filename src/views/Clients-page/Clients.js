@@ -63,6 +63,10 @@ const Clients = () => {
         <Col md={4}>
           <Form.Select>
             <option>Select Company</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
           </Form.Select>
         </Col>
       </Row>
