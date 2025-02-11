@@ -57,7 +57,6 @@ import DailyReport from "./views/HR/Report/Daily/Daily";
 import LeavePolicy from './views/HR/LeavePolicy/Leave-Policy'
 
 
-
 const routes = [
   // { path: '/login', name: 'Login',  element: Login },
 
